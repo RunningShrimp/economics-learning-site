@@ -1,0 +1,619 @@
+{
+  "chapter": "x01",
+  "title": "当代经济学前沿",
+  "points": [
+    {
+      "id": "x01-01",
+      "title": "行为经济学：损失厌恶与助推",
+      "l1": {
+        "definition": "行为经济学研究真实的人如何系统性地偏离“完全理性人”假设；损失厌恶（loss aversion）指等额损失带来的痛苦大于等额收益带来的快乐，助推（nudge）则是在不禁止任何选项、不显著改变经济激励的前提下，通过改变默认选项等“选择架构”引导人们做出更好的决策。",
+        "analogy": "损失厌恶：丢了 200 元的懊恼，恐怕要捡到 400 元的开心才能抵消。助推：自助餐厅把水果摆在视线齐平的位置、把甜点放到角落——没人禁止你吃甜点，但大多数人会不自觉吃得健康一点；就像手机的默认铃声，多数人从不更改，默认什么就用什么。",
+        "image": {
+          "type": "bars",
+          "params": {
+            "items": [
+              { "label": "赢 1000 元的快乐", "value": 1 },
+              { "label": "输 1000 元的痛", "value": 2 }
+            ],
+            "xLabel": "等额损益",
+            "yLabel": "心理感受强度（示意）"
+          },
+          "caption": "损失厌恶示意：等额损失的“痛感”约为等额收益“快感”的两倍（示意图，非真实测量）"
+        }
+      },
+      "case": {
+        "event": "英国职业养老金“自动加入”（Automatic Enrolment）改革：把默认从“不加入”改为“加入”的国家级助推",
+        "facts": "英国自 2012 年起推行自动加入职业养老金。据英国就业与养老金部（DWP）官方统计：2024 年约 89%（约 2170 万）符合条件雇员参加职业养老金储蓄，全体雇员参与率约 82%（2330 万人）；2024 年合格储户年度养老金储蓄达 1497 亿英镑，较 2012 年实际水平（2024 年价格）增加 491 亿英镑。",
+        "source_ref": "[英国就业与养老金部（DWP）, 2025, 《gov.uk 官方统计》, Workplace pension participation and savings trends of eligible employees: 2009 to 2024](https://www.gov.uk/government/statistics/workplace-pension-participation-and-savings-trends-2009-to-2024/workplace-pension-participation-and-savings-trends-of-eligible-employees-2009-to-2024)",
+        "explain": "标准模型中，理性人比较储蓄的成本与收益自主决策，“默认状态”无关紧要；但现实中的拖延与怕麻烦让“什么都不做”成为常态。政策把默认从“不加入”改为“加入”（保留随时退出权），正是利用现状偏差与惰性：什么都不做恰好等于“开始储蓄”。参与率因此长期稳定在高位——无需强制，也无需大规模补贴，仅改变选择架构就重写了数千万人的储蓄行为。"
+      },
+      "l2": {
+        "derivation": "与标准模型对照（期望效用 vs 前景理论）：\n1) 期望效用理论：U = E[u(w)]，效用函数只定义在最终财富 w 上且处处凹；是否接受（+100, −100）的对称赌局，只取决于风险厌恶程度，与表述方式和参照点无关。\n2) 前景理论（Kahneman & Tversky）：价值函数定义在相对参照点的“收益/损失”上，且损失段斜率更陡——损失厌恶系数 λ 约 2.25，即损失 1 元的痛约等于收益 2.25 元的快。\n3) 由损失厌恶可推出一串“异象”：禀赋效应（拥有才觉得值钱）、处置效应（赢家卖太早、输家拿太久）、对兜底保险的过度需求。\n4) 助推机制：把期望行为设为默认 → 改变“什么都不做”的后果，但不改变预算约束与可选集——这与新古典“理性选择不受框架影响”的结论形成直接对照；英国的自动加入正是把退出成本（填一张表）与加入成本对调。",
+        "exam_tips": "记忆三件套：参照点依赖、损失厌恶（λ>1）、心理账户；助推三特征：不禁止选项、不大幅改变经济激励、退出成本低。考研高频：用损失厌恶解释禀赋效应/处置效应；辨析“助推 vs 强制管制 vs 补贴激励”；自动加入（opt-out）与自愿加入（opt-in）的参与率比较。",
+        "pitfalls": [
+          "❌ 误区：损失厌恶 = 风险厌恶 → ✅ 纠正：风险厌恶是效用函数凹性带来的对一切风险的态度；损失厌恶是损失侧与收益侧敏感度不对称。损失厌恶者甚至可能风险寻求（如亏钱后想翻本下重注）。",
+          "❌ 误区：助推就是政府强制规定 → ✅ 纠正：助推不改变可选集与价格激励、保留低成本退出（如自动加入可一键退出）；强制参保或发钱补贴都不属于助推。"
+        ]
+      },
+      "l3": {
+        "math": "前景理论价值函数（Tversky-Kahneman 1992 记号，纯文本）：\nv(x) = x^β （x ≥ 0，收益段）；v(x) = −λ·(−x)^β （x < 0，损失段），λ > 1 为损失厌恶系数，β < 1 为敏感度递减。\n对称赌局（+h, −h）的主观价值：V = 0.5·h^β − 0.5·λ·h^β = 0.5·h^β·(1 − λ) < 0，故只要 λ > 1，任何规模的对称赌局都会被拒绝（对照：期望效用下小赌局的拒绝引出拉宾悖论）。\n助推的机制化：设行动成本 c（填表、决策负担），默认 d ∈ {不加入, 加入}；个体选择加入当且仅当 ΔU > c(d)。把默认设为“加入”，等价于让“不作为”落在加入上、把成本 c 只加在退出者身上——政策以零补贴改变均衡参与率。"
+      },
+      "animation": {
+        "type": "slider-graph",
+        "params": {
+          "mode": "line",
+          "expr": "x>=0 ? Math.pow(x, beta) : -lambda*Math.pow(-x, beta)",
+          "xRange": [-100, 100],
+          "yLabel": "心理价值 v(x)",
+          "xLabel": "相对参照点的损益 x",
+          "sliders": [
+            { "key": "lambda", "min": 1, "max": 4, "step": 0.05, "init": 2.25, "label": "损失厌恶系数 λ" },
+            { "key": "beta", "min": 0.2, "max": 1, "step": 0.05, "init": 0.5, "label": "敏感度 β" }
+          ]
+        },
+        "description": "画出前景理论价值函数：拖动 λ 看损失段比收益段陡多少，拖动 β 看敏感度递减造成的弯曲。",
+        "interactions": [
+          "拖动 λ 滑杆（1~4），观察损失段陡峭程度变化；λ=1 时两侧对称",
+          "拖动 β 滑杆（0.2~1），观察收益/损失两段由直线变为凹形弯曲"
+        ]
+      },
+      "quiz": [
+        {
+          "level": "L1",
+          "stem": "“损失厌恶”指的是以下哪种现象？",
+          "options": [
+            "人们讨厌承担任何形式的投资风险",
+            "人们对收益比对损失更敏感",
+            "等额损失带来的痛苦大于等额收益带来的快乐",
+            "人们不愿意改变现有的消费习惯"
+          ],
+          "answer": 2,
+          "explain": "损失厌恶强调的是损失与收益两侧的心理敏感度不对称：亏 100 元的痛大于赚 100 元的乐。A 说的是（一般化的）风险厌恶，D 说的是现状偏差，均与“等额不对称”无关。",
+          "hint": "注意关键词“等额”：同样金额，一亏一赚，感受并不对称。"
+        },
+        {
+          "level": "L2",
+          "stem": "（英国自动加入案例）据 DWP 官方统计，2024 年英国合格雇员年度养老金储蓄达 1497 亿英镑，较 2012 年实际水平增加 491 亿英镑。2012 年的实际储蓄水平约为多少？",
+          "options": [
+            "约 1006 亿英镑",
+            "约 1509 亿英镑",
+            "约 986 亿英镑",
+            "约 1988 亿英镑"
+          ],
+          "answer": 0,
+          "explain": "1497 − 491 = 1006（亿英镑，2024 年价格）。背景机制：2012 年起“自动加入”把默认选项改为参加，参与率大幅上升带来储蓄总量的实际扩张——选择架构的改变，没有禁止任何选项，也未强制缴费。",
+          "hint": "题干说“较 2012 年增加 491 亿”，所以 2012 年水平 = 2024 年水平减去增量。"
+        },
+        {
+          "level": "L3",
+          "stem": "设前景理论价值函数为 v(x) = x^0.5（收益段）、v(x) = −2.25·(−x)^0.5（损失段）。一枚均匀硬币的赌局（+100, −100），其主观价值 V 为多少？",
+          "options": [
+            "V = 0，与期望效用理论一致",
+            "V = +5，赌局值得接受",
+            "V = −10",
+            "V = −6.25，赌局会被拒绝"
+          ],
+          "answer": 3,
+          "explain": "v(100) = 100^0.5 = 10；v(−100) = −2.25 × 100^0.5 = −22.5。V = 0.5×10 + 0.5×(−22.5) = 5 − 11.25 = −6.25 < 0。只要 λ > 1，任何对称赌局的主观价值都为负（V = 0.5·h^β(1−λ)），这就是损失厌恶的代数表达。",
+          "hint": "先分别算出 v(100) 与 v(−100)，再按概率 0.5 加权；注意损失段的系数 −2.25。"
+        }
+      ],
+      "frontier": [
+        {
+          "finding": "研究问题：在代表性人群中到底有多少人是损失厌恶的？核心发现：三项激励相容的代表性调查（合并 N=3000）显示，约 50% 的美国人口是“损失容忍型”，愿意接受期望为负的赌局——与此前学生/实验室样本及专家预测的“70%–90% 损失厌恶”相反；且损失厌恶在认知能力更高的人群中更常见。对教材的补充/修正：不能把“人人损失厌恶”当作普适参数，损失厌恶存在系统的人群异质性。",
+          "controversy": "结果与实验室主流证据方向相反（样本、方法差异所致），学界尚有争议。",
+          "citation": "[Chapman, Snowberg, Wang, Camerer, 2022, 《NBER Working Paper 30243》, Looming Large or Seeming Small? Attitudes Towards Losses in a Representative Sample](https://www.nber.org/papers/w30243)"
+        },
+        {
+          "finding": "研究问题：英格兰 2020 年 5 月 20 日生效的器官捐献“默认同意（视同同意）”立法（最著名的默认选项助推之一）是否提高了捐献？核心发现：英格兰知情同意率从 2019 年 4–6 月的 68.3% 降至 2023 年 4–6 月的 63.2%，符合条件捐献者数量到 2023 年同期仅恢复至 2019 年水平的 87.4%；立法并未带来预期中的上升。对教材的修正：默认选项助推并非万能——在情感投入高、家庭可否决的领域，仅改默认难以改变行为。",
+          "controversy": "作者将同意率下降主要归因于新冠疫情冲击而非立法本身；默认选项有效性的边界条件，学界尚有争议。",
+          "citation": "[O'Neill, Thomas, McLaughlin 等, 2024, 《PLoS One 19(7): e0306541》, Trends in organ donation in England, Scotland and Wales in the context of the COVID-19 pandemic and 'opt-out' legislation](https://pmc.ncbi.nlm.nih.gov/articles/PMC11290620/)"
+        }
+      ],
+      "links": {
+        "prev": [
+          "h09-05|全站上一页：预期与理性预期——行为经济学的“系统性偏离”正以理性人为对照",
+          "m04-01|效用与边际效用递减：期望效用是前景理论的对照基准"
+        ],
+        "next": [
+          "x01-02|下一页：数字经济——平台既利用行为偏差（默认与框架）也大规模实施助推"
+        ]
+      },
+      "references": [
+        "[英国就业与养老金部（DWP）, 2025, 《gov.uk 官方统计》, Workplace pension participation and savings trends of eligible employees: 2009 to 2024](https://www.gov.uk/government/statistics/workplace-pension-participation-and-savings-trends-2009-to-2024/workplace-pension-participation-and-savings-trends-of-eligible-employees-2009-to-2024)",
+        "[Chapman, Snowberg, Wang, Camerer, 2022, 《NBER Working Paper 30243》, Looming Large or Seeming Small? Attitudes Towards Losses in a Representative Sample](https://www.nber.org/papers/w30243)",
+        "[O'Neill, Thomas, McLaughlin 等, 2024, 《PLoS One 19(7): e0306541》, Trends in organ donation in England, Scotland and Wales in the context of the COVID-19 pandemic and 'opt-out' legislation](https://pmc.ncbi.nlm.nih.gov/articles/PMC11290620/)"
+      ]
+    },
+    {
+      "id": "x01-02",
+      "title": "数字经济：平台、网络效应与算法定价",
+      "l1": {
+        "definition": "平台（双边市场）是同时服务两类互相需要对方的市场中介——比如外卖平台连接食客与餐厅；交叉网络外部性（cross-side network externality）指一侧用户越多，另一侧用户的效用越大。算法定价（algorithmic pricing）是让算法自动定价，研究发现它可能不需要任何“合谋协议”就推高价格。",
+        "analogy": "双边市场像夜市：小吃摊越多，逛夜市的人就越多；人越多，摊主越愿意来——平台的价值靠“两头互相拉”。算法定价像市场里每个摊主都雇了同一个反应极快的报价员，秒级跟随对手改价：没人开会串通，价格也可能悄悄一起走高。",
+        "image": {
+          "type": "flow-loop",
+          "params": {
+            "nodes": ["更多商家入驻", "商品更丰富、平台吸引力上升", "更多消费者加入", "商家预期客流更旺、更愿入驻"],
+            "xLabel": "",
+            "yLabel": ""
+          },
+          "caption": "交叉网络外部性：平台两侧用户互相吸引，形成正反馈循环"
+        }
+      },
+      "case": {
+        "event": "国家市场监督管理总局对阿里巴巴“二选一”垄断行为作出行政处罚",
+        "facts": "2021 年 4 月 10 日，国家市场监督管理总局认定阿里巴巴集团在中国境内网络零售平台服务市场滥用市场支配地位：自 2015 年起实施“二选一”，禁止平台内商家在其他竞争性平台开店或参加促销，并借助平台规则、数据与算法采取多种奖惩手段保障执行；责令停止违法行为，并处以其 2019 年中国境内销售额 4557.12 亿元的 4% 罚款，计 182.28 亿元。",
+        "source_ref": "[新华社, 2021, 《新华网》, 市场监管总局依法对阿里巴巴集团控股有限公司在中国境内网络零售平台服务市场实施“二选一”垄断行为作出行政处罚](http://www.xinhuanet.com/politics/2021-04/10/c_1127314195.htm)",
+        "explain": "交叉网络外部性让平台天然倾向“赢家通吃”：用户规模本身构成进入壁垒。一旦成为支配性平台，就有动机把市场势力延伸为排他约束——“二选一”切断了商家在多个平台同时经营（多归属），锁死两侧正反馈，排除、限制了竞争。按上一年度销售额 4% 处罚，正是对“平台用网络效应放大并固化支配地位”的矫正：只有让两侧用户保持多归属自由，竞争才能约束平台定价。"
+      },
+      "l2": {
+        "derivation": "单边市场 vs 双边市场对照：\n1) 单边市场：定价只看一条需求曲线，MR = MC 决定价格。\n2) 双边市场（Rochet-Tirole 思想）：平台两侧用户互相创造外部性，总价格 P = pA + pB 才是需求决策变量；两侧弹性不同 → 最优定价系统性地偏离成本：对“弹性大且能为另一侧带来外部性”的一侧收低价甚至补贴，在另一侧收费。\n3) 网络效应 = 进入壁垒：用户规模、数据积累与商家多归属成本，使后来者即使免费也难获临界规模。\n4) 排他行为放大壁垒：“二选一”这类排他协议削弱多归属 → 正反馈只流向在位平台 → 反垄断审查的核心对象；这也是本案 4% 销售额罚款的经济学逻辑。",
+        "exam_tips": "三个必考区分：交叉网络外部性 vs 同侧网络外部性；平台“对一侧免费/补贴”与垄断倾销的区别（前者是利润最大化定价，后者是掠夺性定价）；算法定价下“无协议合谋”对《反垄断法》协议要件理论的冲击。计算常考：按销售额比例计罚（本案 4%）、交叉外部性下最优非对称定价方向。",
+        "pitfalls": [
+          "❌ 误区：平台对一侧免费 = 倾销或不正当竞争 → ✅ 纠正：双边市场中，对价格敏感、能为另一侧带来外部性的一侧收低价甚至补贴，正是利润最大化定价；本案违法点在“二选一”排他行为，而非免费策略本身。",
+          "❌ 误区：网络效应越大越好、没有福利代价 → ✅ 纠正：网络效应同时构成进入壁垒，可能强化支配地位并诱发排他激励，这正是反垄断要评估的市场势力来源。"
+        ]
+      },
+      "l3": {
+        "math": "双边平台定价模型（简化 Rochet-Tirole / Armstrong）：两侧用户效用 uA = αA·nB − pA，uB = αB·nA − pB，αA、αB 为交叉网络外部性强度，n 为参与人数，由参与约束 u ≥ 0 决定。平台利润 π = (pA − cA)·nA + (pB − cB)·nB。一阶条件给出勒纳式修正：pA − cA ≈ pA/εA − αB·nA/εB（B 侧类似）——一侧的加价取决于自身价格弹性 ε 与它带给另一侧的外部性 α。推论：αB 越大（A 侧越离不开 B 侧），pA 越应低于成本，极端时 pA < 0（补贴）。这就是“平台补贴用户侧、向商家收费”的数学根源；也说明排他协议通过压缩 nB（竞争对手侧的用户基础）来间接抬高两侧的可持续加价空间。"
+      },
+      "animation": {
+        "type": "slider-graph",
+        "params": {
+          "mode": "line",
+          "expr": "(100 - 1.2*x) + s1*x",
+          "xRange": [0, 50],
+          "yLabel": "用户支付意愿 P",
+          "xLabel": "一侧用户规模 Q",
+          "sliders": [
+            { "key": "s1", "min": 0, "max": 1.5, "step": 0.05, "init": 0.8, "label": "交叉网络外部性强度 e" }
+          ]
+        },
+        "description": "拖动外部性强度滑杆，观察网络效应如何把需求曲线“撑平”甚至上翘：用户规模本身开始创造价值。",
+        "interactions": [
+          "拖动滑杆 e 从 0 到 1.5：e 小时需求线陡峭下行；e 接近 1.5 时曲线变平乃至上升，显示网络效应主导定价"
+        ]
+      },
+      "quiz": [
+        {
+          "level": "L1",
+          "stem": "“交叉网络外部性”指的是什么？",
+          "options": [
+            "平台同一侧的用户之间互相干扰、降低彼此效用",
+            "平台一侧用户的数量影响另一侧用户获得的效用",
+            "平台对一侧用户免费开放注册",
+            "政府对平台经济实施的外部监管"
+          ],
+          "answer": 1,
+          "explain": "交叉（cross-side）指的是跨过平台的两边：商家越多，食客越受益；食客越多，商家越受益。同侧用户互相影响叫同侧（自）网络外部性，与题干无关。",
+          "hint": "抓住“交叉”二字：一侧的规模，另一侧受益。"
+        },
+        {
+          "level": "L2",
+          "stem": "（阿里巴巴案背景）该案罚款按上一年度中国境内销售额的 4% 计算（阿里巴巴 2019 年境内销售额 4557.12 亿元，罚 182.28 亿元）。假设另一平台境内销售额为 2000 亿元且按同比例处罚，罚款应为多少？",
+          "options": [
+            "45.7 亿元",
+            "60 亿元",
+            "80 亿元",
+            "92 亿元"
+          ],
+          "answer": 2,
+          "explain": "2000 × 4% = 80（亿元）。按上一年度销售额的比例计罚是《反垄断法》对滥用市场支配地位的处罚方式，罚款规模随平台体量线性放大——平台越大，排他行为的代价越高。",
+          "hint": "直接用 2000 亿元乘以 4% 即可；4% 是本案的关键比例。"
+        },
+        {
+          "level": "L3",
+          "stem": "双边平台两侧用户效用为 uA = 2·nB − pA，uB = 0.5·nA − pB。若平台想以有限让利撬动整个网络，应重点补贴哪一侧？",
+          "options": [
+            "B 侧：每个 B 用户给 A 侧用户带来 2 单位效用，B 侧是外部性引擎",
+            "A 侧：因为参数 αA = 2 数值更大，理应补贴 A",
+            "两侧等额补贴：对称定价才是最优",
+            "两侧都补贴至价格为零：零价格时利润必然最大"
+          ],
+          "answer": 0,
+          "explain": "每个 B 用户使每个 A 用户的效用提高 αA = 2，而每个 A 用户只给 B 侧带来 αB = 0.5。补贴“能为另一侧创造更大外部性”的一侧（B 侧），能以同样的价格让利撬动更大的 A 侧参与，这正是双边市场一阶条件 pB − cB ≈ pB/εB − αA·nB/εA 的含义：αA 越大，pB 越应低于成本。",
+          "hint": "问自己：给哪一侧降价 1 元，能通过外部性拉动另一侧更多用户？看的是“它给对方带去多少效用”。"
+        }
+      ],
+      "frontier": [
+        {
+          "finding": "研究问题：基于大语言模型（LLM）的定价智能体在寡头定价中会不会自发合谋？核心发现：实验显示 LLM 定价智能体“迅速且自主地”达到超竞争的价格与利润，提示词中看似无害的措辞也会显著影响定价结果，结论还延伸到拍卖场景；作者指出这给未来的 AI 监管提出全新挑战。对教材的补充：合谋未必需要明示协议，也未必依赖复杂的强化学习——会聊天的算法同样可能自发抬高价格。",
+          "controversy": "LLM 行为对提示词敏感、可复现性有限，能否外推到真实市场，学界尚有争议。",
+          "citation": "[Fish, Gonczarowski, Shorrer, 2024, 《arXiv:2404.00806（EC 2026 录用）》, Algorithmic Collusion by Large Language Models](https://arxiv.org/abs/2404.00806)"
+        },
+        {
+          "finding": "研究问题：定价算法通过什么机制影响竞争（不需要合谋协议）？核心发现：用高频价格数据记录了在线零售商定价技术的差异——部分卖家能高频调价并对对手价格自动响应；模型证明即使在竞争性（马尔可夫完美）均衡中，简单的定价算法也能抬高价格水平、制造价格离散，并放大并购的价格效应。对教材的修正：算法定价问题可以完全绕开“默契合谋”框架，纯粹的算法承诺（高频跟随）即可软化竞争。",
+          "controversy": "",
+          "citation": "[Brown, MacKay, 2023, 《American Economic Journal: Microeconomics 15(2): 109-156》, Competition in Pricing Algorithms](https://www.aeaweb.org/articles?id=10.1257/mic.20210158)"
+        }
+      ],
+      "links": {
+        "prev": [
+          "x01-01|上一页：行为经济学——默认与框架是平台设计的常用工具",
+          "m07-04|重复博弈与合谋：算法定价合谋是“无形合谋”的算法版本"
+        ],
+        "next": [
+          "x01-03|下一页：气候经济学——把外部性变成价格的全球实践"
+        ]
+      },
+      "references": [
+        "[新华社, 2021, 《新华网》, 市场监管总局依法对阿里巴巴集团控股有限公司在中国境内网络零售平台服务市场实施“二选一”垄断行为作出行政处罚](http://www.xinhuanet.com/politics/2021-04/10/c_1127314195.htm)",
+        "[Fish, Gonczarowski, Shorrer, 2024, 《arXiv:2404.00806（EC 2026 录用）》, Algorithmic Collusion by Large Language Models](https://arxiv.org/abs/2404.00806)",
+        "[Brown, MacKay, 2023, 《American Economic Journal: Microeconomics 15(2): 109-156》, Competition in Pricing Algorithms](https://www.aeaweb.org/articles?id=10.1257/mic.20210158)"
+      ]
+    },
+    {
+      "id": "x01-03",
+      "title": "气候经济学：碳定价与社会碳成本",
+      "l1": {
+        "definition": "气候变化是当代最大的市场失灵之一：排碳者不承担气候损害的全部社会成本。碳定价（碳税或碳排放权交易）给每吨 CO2 定出价格；社会碳成本（SCC, Social Cost of Carbon）指多排放 1 吨 CO2 给全社会带来的全部未来损害的现值——它是“1 吨碳值多少钱”的政策标尺。",
+        "analogy": "碳定价像“垃圾按袋收费”：扔垃圾（排碳）免费时大家往死里扔，按袋收费后自然想办法少扔、回收。SCC 像给“未来账单”打折扣：今天排的 1 吨碳，会在未来几十年造成减产、海平面上升等损害，把这些未来损害折算回今天的钱，就是这吨碳的“社会标价”。",
+        "image": {
+          "type": "two-lines-intersection",
+          "params": {
+            "aLabel": "边际减排成本 MAC",
+            "aDir": "down",
+            "bLabel": "边际损害 MDB",
+            "bDir": "up",
+            "xLabel": "减排量",
+            "yLabel": "元/吨 CO2",
+            "pointLabel": "最优减排 E*"
+          },
+          "caption": "最优碳价：边际减排成本与边际损害（ avoided damage）曲线的交点决定最优减排量与碳价"
+        }
+      },
+      "case": {
+        "event": "欧盟碳边境调节机制（CBAM）自 2026 年 1 月 1 日起进入正式实施期",
+        "facts": "欧盟 CBAM 在 2023–2025 年为过渡期（仅申报、不缴费）；据欧盟委员会官方页面，自 2026 年 1 月 1 日起 CBAM 适用正式制度：进口商须获得授权、履行申报义务，并购买与清缴 CBAM 证书，证书价格按欧盟碳排放交易体系（EU ETS）配额拍卖价计算；覆盖水泥、钢铁、铝、化肥、电力、氢六大类进口，同时欧盟 ETS 逐步取消免费配额。",
+        "source_ref": "[欧盟委员会（European Commission）, 2026, 《Taxation and Customs 官方页面》, Carbon Border Adjustment Mechanism (CBAM)](https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en)",
+        "explain": "碳在欧盟境内有价（EU ETS），进口碳却曾经免费，于是出现“碳泄漏”：高碳生产迁往无碳价国家、产品再卖回欧盟。CBAM 让进口品的隐含碳与境内碳同价——证书价格直接挂钩 EU ETS 拍卖价，相当于把庇古税“装进海关”。它同时解决两个问题：保护境内产业竞争力，并激励贸易伙伴建立自己的碳价（生产国已付碳价可抵扣），把教材里“单边碳价的国际溢出”变成了正在运行的法律制度。"
+      },
+      "l2": {
+        "derivation": "从外部性到碳价（四步）：\n1) 负外部性：边际私人成本 < 边际社会成本，市场产量过高；庇古税 t = SCC 使排碳者面对完整社会成本。\n2) 图形：横轴减排量，MAC（边际减排成本，下行）与 MDB（边际损害 avoided，上行）交于 E*；均衡碳价 = 交点高度——碳税（定价格）与碳市场（定数量、价格由配额竞争形成）殊途同归。\n3) 价格工具 vs 数量工具（Weitzman 1974）：边际收益曲线更陡时选数量工具（碳市场），反之选碳税。\n4) 国际维度：单边碳价引致碳泄漏 → CBAM 按进口品隐含排放与欧盟碳价的差额征收证书费，把“境内碳价”外化为贸易条件。",
+        "exam_tips": "考点清单：SCC 的定义（未来全部损害的现值）；贴现率对 SCC 的杠杆效应（必考计算）；碳税 vs 碳市场的比较；CBAM 与发展中国家公平性、WTO 规则的争议。计算模板：损害现值 = D/(1+r)^t；最优碳价 = 交点处 MDB = MAC。",
+        "pitfalls": [
+          "❌ 误区：贴现率差 1 个百分点无关紧要 → ✅ 纠正：100 年后 1000 元损害，2% 贴现下现值约 138 元，5% 贴现下不足 8 元——SCC 对贴现率极端敏感，这正是气候经济学的核心争论。",
+          "❌ 误区：CBAM 就是一张“关税” → ✅ 纠正：它是碳价差调整机制，出口国已支付的碳价可抵扣；目的是让进口品与境内产品碳价对齐、防碳泄漏，而非单纯筹集财政收入。"
+        ]
+      },
+      "l3": {
+        "math": "SCC 的现值定义：SCC = Σ(t=1..T) D_t/(1+r)^t，D_t 为边际 1 吨碳在第 t 年造成的损害。贴现争论：①常数贴现（Nordhaus DICE 传统，r 约 3% 上下）→ SCC 较低（旧美国官方值 51 美元/吨）；②递减/伽马贴现与 Ramsey 框架 r = ρ + η·g（Weitzman 的伽马贴现论证：利率不确定性使有效贴现率随期限递减；EPA 2023 采用“近期 Ramsey 2%”）→ SCC 大幅上调。EPA 2023 年报告：2020 年排放的 SC-CO2 = 190 美元/吨（2.0% 近期 Ramsey 贴现率）。Bilal-Känzig（NBER w32450，QJE 2026）用全球温度冲击估计宏观损害，隐含 SCC > 1200 美元/吨。数量级差异几乎全部来自贴现参数 (ρ, η) 与损害函数设定——本质上是我们给“未来”分配多大权重。"
+      },
+      "animation": {
+        "type": "slider-graph",
+        "params": {
+          "mode": "line",
+          "expr": "1000/Math.pow(1+s1, x)",
+          "xRange": [0, 200],
+          "yLabel": "损害现值 PV（元）",
+          "xLabel": "未来年份 t",
+          "sliders": [
+            { "key": "s1", "min": 0.001, "max": 0.07, "step": 0.005, "init": 0.02, "label": "贴现率 r" }
+          ]
+        },
+        "description": "把发生在未来第 t 年的 1000 元气候损害折成现值：拖动贴现率，看 2% 与 5% 之下现值的巨大差异——这正是 SCC 争论的核心。",
+        "interactions": [
+          "拖动贴现率滑杆（0.1%~7%），观察现值曲线整体下压：r 越大，遥远未来的损害越“不值钱”"
+        ]
+      },
+      "quiz": [
+        {
+          "level": "L1",
+          "stem": "“社会碳成本（SCC）”指的是什么？",
+          "options": [
+            "多排放 1 吨 CO2 给全社会带来的全部未来损害的现值",
+            "企业在碳市场上购买配额的价格",
+            "捕集封存 1 吨 CO2 的工程技术成本",
+            "政府征收碳税的名义税率"
+          ],
+          "answer": 0,
+          "explain": "SCC 是损害概念：边际 1 吨碳的全部未来社会损害的现值。碳市场价格与碳税率是政策上对 SCC 的近似，但都不是 SCC 本身的定义。",
+          "hint": "SCC 是“每吨碳的社会标价”，先分清“损害的现值”与“市场/政策价格”。"
+        },
+        {
+          "level": "L2",
+          "stem": "（CBAM 案例）按 CBAM 机制，证书价格按 EU ETS 拍卖价计算，生产国已付碳价可抵扣。设 EU ETS 拍卖价为 80 欧元/吨，某批进口钢材隐含排放 500 吨 CO2，其生产国已支付 10 欧元/吨碳价，则进口商需购买的证书价值约为多少？",
+          "options": [
+            "40000 欧元",
+            "5000 欧元",
+            "35000 欧元",
+            "30000 欧元"
+          ],
+          "answer": 2,
+          "explain": "(80 − 10) × 500 = 35000（欧元）。CBAM 只对“碳价差”收费：欧盟碳价与生产国已付碳价之间的差额 × 隐含排放，这就是它区别于普通关税、以对齐碳价为目的的机制设计。",
+          "hint": "先算每吨价差 80 − 10 = 70 欧元，再乘以隐含排放 500 吨。"
+        },
+        {
+          "level": "L3",
+          "stem": "假设 100 年后发生 1000 元的气候损害，贴现率取 2%，其现值约为多少？",
+          "options": [
+            "约 7.6 元",
+            "约 138 元",
+            "约 372 元",
+            "约 980 元"
+          ],
+          "answer": 1,
+          "explain": "PV = 1000/(1.02)^100 ≈ 1000/7.24 ≈ 138 元。对比：贴现率 5% 时现值仅约 7.6 元——相差近 18 倍。SCC 之所以从 51 美元/吨升到 190 美元甚至更高，贴现率从 3% 降到 2% 是首要原因。",
+          "hint": "套用 PV = D/(1+r)^t；(1.02)^100 约等于 7.2。"
+        }
+      ],
+      "frontier": [
+        {
+          "finding": "研究问题：美国官方社会碳成本应如何更新？核心发现：EPA 2023 年最终报告采用新的模块化模型与“随时间变化的 Ramsey 贴现”，把 2020 年排放的 SC-CO2 定为 190 美元/吨（2.0% 近期贴现率；同时给出 1.5% 与 2.5% 档），SC-CH4 = 1600 美元/吨、SC-N2O = 5400 美元/吨——远高于此前沿用多年的临时值 51 美元。对教材的修正：官方 SCC 从“常数贴现”转向“递减 Ramsey 贴现”，贴现假设的杠杆作用被官方实践坐实。",
+          "controversy": "贴现率档位选择（尤其 1.5% 档隐含更高估值）在成本收益分析学界与司法审查中仍有争议。",
+          "citation": "[Harvard EELP（哈佛法学院环境与能源法律项目）, 2023, 《The Social Cost of Carbon Tracker》, EPA's Report on the Social Cost of Greenhouse Gases: Estimates Incorporating Recent Scientific Advances](https://eelp.law.harvard.edu/tracker/the-social-cost-of-carbon/)"
+        },
+        {
+          "finding": "研究问题：用最新气候科学与经济证据重估，SCC 应该是多少？核心发现：基于开源 GIVE 模型与 RFF-SP 情景，首选均值 SC-CO2 = 185 美元/吨（2% 近期无风险贴现率，5%–95% 区间 44–413），为当时官方值 51 美元的 3.6 倍；温度—死亡率是最重要损害通道；贴现率降到 1.5% 时均值升至 308 美元、升到 3% 降至 80 美元。对教材的补充：给出了可复算的现代 SCC 估计框架（ EPA 2023 的方法基础）。",
+          "controversy": "",
+          "citation": "[Rennert, Errickson, Prest 等, 2022, 《Nature 610: 687-692》, Comprehensive evidence implies a higher social cost of CO2](https://pmc.ncbi.nlm.nih.gov/articles/PMC9605864/)"
+        },
+        {
+          "finding": "研究问题：用全球（而非局部）温度冲击识别气候对宏观经济的因果影响，损害有多大？核心发现：1°C 升温长期使世界 GDP 下降超 20%，常态化变暖意味着超 30% 的现值福利损失，隐含 SCC 超 1200 美元/吨（QJE 2026 版本），并据此论证美国等大国单边减碳即已成本有效。对教材的修正：若结论成立，主流成本收益分析系统性低估了减排收益。",
+          "controversy": "结果比 EPA/Rennert 等主流估计高一个数量级，损害函数的识别与外推方法受到质疑，学界尚有争议。",
+          "citation": "[Bilal, Känzig, 2024, 《NBER Working Paper 32450（QJE 2026 刊出）》, The Macroeconomic Impact of Climate Change: Global vs. Local Temperature](https://www.nber.org/papers/w32450)"
+        }
+      ],
+      "links": {
+        "prev": [
+          "x01-02|上一页：数字经济——碳市场同样依托数据、交易与算法机制",
+          "m09-04|庇古税与排污权交易：碳定价正是庇古思路在最大尺度上的应用"
+        ],
+        "next": [
+          "x01-04|下一页：AI 与劳动力市场——另一场技术冲击的分配后果"
+        ]
+      },
+      "references": [
+        "[欧盟委员会（European Commission）, 2026, 《Taxation and Customs 官方页面》, Carbon Border Adjustment Mechanism (CBAM)](https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en)",
+        "[Harvard EELP（哈佛法学院环境与能源法律项目）, 2023, 《The Social Cost of Carbon Tracker》, EPA's Report on the Social Cost of Greenhouse Gases: Estimates Incorporating Recent Scientific Advances](https://eelp.law.harvard.edu/tracker/the-social-cost-of-carbon/)",
+        "[Rennert, Errickson, Prest 等, 2022, 《Nature 610: 687-692》, Comprehensive evidence implies a higher social cost of CO2](https://pmc.ncbi.nlm.nih.gov/articles/PMC9605864/)",
+        "[Bilal, Känzig, 2024, 《NBER Working Paper 32450（QJE 2026 刊出）》, The Macroeconomic Impact of Climate Change: Global vs. Local Temperature](https://www.nber.org/papers/w32450)"
+      ]
+    },
+    {
+      "id": "x01-04",
+      "title": "AI 与劳动力市场",
+      "l1": {
+        "definition": "任务模型（task-based view）主张：AI 影响就业的单位是“任务”而非整个职业。一个职业是一束任务的组合，AI 先替代其中常规性、可文本化的任务；同时生产率上升、需求扩张与新任务创造会部分甚至完全抵消替代效应，最终的就业与工资结果由三股力量的净效应决定。",
+        "analogy": "职业像一篮子菜：会计的工作 = 开票 + 对账 + 解读报表。AI 先拿走“对账”这颗菜，篮子还在，只是菜的构成变了。就像当年 Excel 没有消灭会计，而是消灭了“手工记账”这项任务，又创造了“会做电子表格”的新任务。",
+        "image": {
+          "type": "flow-loop",
+          "params": {
+            "nodes": ["AI 能力上升", "常规任务被自动化", "成本下降、生产率上升", "新任务与需求扩张"],
+            "xLabel": "",
+            "yLabel": ""
+          },
+          "caption": "任务模型：AI 既替代任务（替代效应），也通过生产率与新任务回补劳动（复原效应）"
+        }
+      },
+      "case": {
+        "event": "Klarna 上线基于 OpenAI 的 AI 客服助理",
+        "facts": "2024 年 2 月 27 日，瑞典消费金融公司 Klarna 官宣：其 AI 客服助理上线首月完成 230 万次对话，处理了三分之二的客服聊天，相当于 700 名全职客服的工作量；客户事务解决时间从 11 分钟降至 2 分钟以内，重复咨询下降 25%，公司预计 2024 年将带来 4000 万美元的利润改善。",
+        "source_ref": "[Klarna, 2024, 《Klarna 官方新闻稿》, Klarna AI assistant handles two-thirds of customer service chats in its first month](https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/)",
+        "explain": "这是任务模型的一次真实显影：客服职业中的“标准问答、查询、退换流程”等常规任务被大语言模型大面积替代（三分之二聊天量），但复杂纠纷与情绪安抚等任务仍在人工侧；同时响应更快、成本更低的生产率效应与“AI 监督、内容生成、流程整合”等新任务同步出现。同一个职业内部，替代与回补正在同时发生——这正是任务模型区别于“AI 抢走整个职业”叙事的地方。"
+      },
+      "l2": {
+        "derivation": "要素模型 vs 任务模型（Acemoglu-Restrepo 框架）：\n1) 要素模型：Y = A·K^α·L^(1-α)，把劳动当作同质要素，只能回答“资本相对便宜到什么程度会替代劳动”，难以解释同职业内部的任务重组。\n2) 任务模型：职业 = 任务束；自动化是“某任务从劳动比较优势转向资本”。三效应分解：替代效应（displacement，压低被替代任务劳动需求）+ 生产率效应（productivity，降低价格、扩张需求）+ 复原效应（reinstatement，创造新任务）。\n3) 均衡条件（简化）：任务 i 由资本执行当且仅当资本单位成本 R ≤ 工资 W（按相对生产率调整后）；自动化概率 P(自动化|i) = P(R ≤ W/γ_i)。\n4) 净效应判断：只有当复原效应（新任务增长）追不上替代效应时，劳动份额与就业才会下降——这把“技术进步长期创造就业”的教材结论变成了可检验的条件命题。",
+        "exam_tips": "必背三效应：替代 / 生产率 / 复原（新任务创造）。高频辨析：“暴露度高 ≠ 失业”；会用任务暴露度解释为何同一职业内部工资分化。证据链要会排序：实验证据（写作任务随机实验）→ 暴露度测度（职业任务重叠）→ 行政数据（全国采用调查 + 登记数据）。",
+        "pitfalls": [
+          "❌ 误区：某职业 AI 暴露度高 = 该职业即将消失 → ✅ 纠正：暴露度衡量任务重叠程度，不是失业预测；高暴露职业也可能因生产率效应与需求扩张而扩张，新任务还常常诞生在高暴露职业内部。",
+          "❌ 误区：把劳动看成同质要素，AI 会均匀替代所有劳动 → ✅ 纠正：AI 替代的是任务，职业是任务束；近年的主要变化形态是职业内部任务构成重组，而非职业整体消失。"
+        ]
+      },
+      "l3": {
+        "math": "任务模型（Acemoglu-Restrepo 简化记号）：连续任务 i ∈ [0,1]，已自动化边界 I（i < I 的任务由资本执行），Y = (∫ y_i^((σ-1)/σ) di)^(σ/(σ-1))。任务 i 自动化条件：资本单位成本 R ≤ W/γ_i（γ_i 为资本相对生产率），故 P(自动化|i) = P(R ≤ W/γ_i)。工资的静态分解：d ln W = 生产率效应 − 替代效应 + 新任务效应；劳动份额 α_L 的走向取决于复原速度与替代速度之差。自动化带来的生产率提升公式：设任务占成本份额 s，自动化把单位成本从工资 W 降至租金 R，则总单位成本下降 s·(1 − R/W)。例：s = 10%、R/W = 0.4 → 生产率提升 6%。"
+      },
+      "animation": {
+        "type": "slider-graph",
+        "params": {
+          "mode": "line",
+          "expr": "100/(1+Math.exp(-0.8*(x-s1)))",
+          "xRange": [0, 100],
+          "yLabel": "任务自动化比例（%）",
+          "xLabel": "任务难度（由易到难）",
+          "sliders": [
+            { "key": "s1", "min": 0, "max": 100, "step": 1, "init": 50, "label": "AI 能力阈值 x*" }
+          ]
+        },
+        "description": "拖动 AI 能力阈值，观察自动化沿任务难度分布逐步推进：能力每升一档，更多任务从人工转向 AI。",
+        "interactions": [
+          "拖动阈值滑杆 x*（0~100），S 型曲线左右移动：阈值越靠右（能力越强），已自动化任务占比越高"
+        ]
+      },
+      "quiz": [
+        {
+          "level": "L1",
+          "stem": "任务模型（task-based view）关于 AI 与就业的核心主张是？",
+          "options": [
+            "AI 会直接取代一个个完整职业，失业率与暴露度一一对应",
+            "AI 只影响制造业，不影响服务业",
+            "AI 只会提高工资，不会改变就业结构",
+            "AI 替代的是职业内部的特定任务，职业是任务束，同时新任务也会被创造"
+          ],
+          "answer": 3,
+          "explain": "任务模型把职业拆成任务束：AI 替代任务而非整个职业，并通过生产率效应与新任务创造部分回补——Klarna 案例中三分之二客服聊天被 AI 接管，但复杂纠纷与新流程任务仍在人工侧，就是典型形态。",
+          "hint": "题眼在“任务”二字：职业是“一篮子任务”，AI 先拿走其中几颗。"
+        },
+        {
+          "level": "L2",
+          "stem": "（Klarna 案例）其 AI 助理首月处理了三分之二的客服聊天，相当于 700 名全职客服的工作量。若这三分之二的工作量全部由 AI 完成，Klarna 客服总量的人工全职当量约为多少？",
+          "options": [
+            "约 1050 名",
+            "约 466 名",
+            "约 1400 名",
+            "恰好 700 名"
+          ],
+          "answer": 0,
+          "explain": "700 ÷ (2/3) = 1050（名全职当量）。理解关键：700 名对应的是“三分之二的工作量”，而非全部工作量——这就是任务模型强调的“部分任务被自动化”，其余三分之一（复杂纠纷等）仍需人工承担。",
+          "hint": "700 名是总工作量的 2/3 对应的当量，总量 = 700 ÷ 2/3。"
+        },
+        {
+          "level": "L3",
+          "stem": "任务 i 原由劳动执行，单位成本等于工资 W = 10；自动化后由资本执行，单位成本 R = 4。该任务占总成本份额 s = 10%，其他任务成本不变，则总单位生产成本下降（即生产率提升）约为多少？",
+          "options": [
+            "10%",
+            "6%",
+            "4%",
+            "60%"
+          ],
+          "answer": 1,
+          "explain": "生产率提升 = s·(1 − R/W) = 0.10 × (1 − 4/10) = 0.10 × 0.6 = 6%。任务本身成本降 60%，但它只占 10% 权重，所以总成本降 6%——这正是评估自动化对总生产率影响的可操作公式。",
+          "hint": "先算该任务自身成本降幅 1 − R/W = 60%，再乘以权重 s = 10%。"
+        }
+      ],
+      "frontier": [
+        {
+          "finding": "研究问题：大语言模型会触及哪些工作任务？核心发现：按任务-时间标注法，约 80% 的美国劳动者至少有 10% 的任务可能受 LLM 影响，约 19% 的劳动者可能有一半以上任务受影响；仅用 LLM 就能显著加速完成且不降质的任务约占全部任务的 15%，叠加 LLM 驱动的软件后升至 47%–56%；影响横跨各工资水平，高收入职业暴露更高，LLM 表现出通用目的技术的特征。对教材的补充：提供了第一代 LLM 任务暴露度的量化标尺。",
+          "controversy": "",
+          "citation": "[Eloundou, Manning, Mishkin, Rock, 2023, 《arXiv:2303.10130》, GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models](https://arxiv.org/abs/2303.10130)"
+        },
+        {
+          "finding": "研究问题：生成式 AI 对真实工作任务的生产率效应有多大？核心发现：预注册随机实验（453 名大学学历职业者，职业化写作任务）：ChatGPT 使平均耗时下降 40%、产出质量上升 18%，且初始水平较弱的参与者受益更大——实验内不平等下降；实验两周后，接触过 ChatGPT 的参与者在真实工作中使用它的概率翻倍。对教材的补充：AI 首先表现为任务层面的生产率冲击，且具有压缩技能差距的作用。",
+          "controversy": "",
+          "citation": "[Noy, Zhang, 2023, 《Science（斯坦福 Scale 项目页收录摘要）》, Experimental evidence on the productivity effects of generative artificial intelligence](https://scale.stanford.edu/publications/experimental-evidence-productivity-effects-generative-artificial-intelligence)"
+        },
+        {
+          "finding": "研究问题：AI 聊天机器人的真实普及是否已改变劳动力市场结果？核心发现：将丹麦代表性采用调查（11 个高暴露职业，2023 年末至 2024 年）与行政登记数据链接：雇主采用率很高，但对工资与工时的估计为“精确零”，ChatGPT 发布两年后可排除大于 2% 的效应；雇主主要通过任务重组吸收 AI（内容生成、AI 监督、系统集成）。对教材的修正：任务层面的生产率收益未必自动转化为工资与就业变化——工资传导很弱，市场处于“转型早段”。",
+          "controversy": "观察期仅约两年，长期与一般均衡效应未知，学界尚有争议。",
+          "citation": "[Humlum, Vestergaard, 2025, 《NBER Working Paper 33777》, Still Waters, Rapid Currents: Early Labor Market Transformation under Generative AI](https://www.nber.org/papers/w33777)"
+        }
+      ],
+      "links": {
+        "prev": [
+          "x01-03|上一页：气候经济学——长期贴现思维同样适用于评估 AI 的长期影响",
+          "m08-01|劳动需求与边际产量值：任务模型是劳动需求理论的精细化"
+        ],
+        "next": [
+          "x01-05|下一页：收入不平等——AI 的分配后果最终汇入 r>g 之问"
+        ]
+      },
+      "references": [
+        "[Klarna, 2024, 《Klarna 官方新闻稿》, Klarna AI assistant handles two-thirds of customer service chats in its first month](https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/)",
+        "[Eloundou, Manning, Mishkin, Rock, 2023, 《arXiv:2303.10130》, GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models](https://arxiv.org/abs/2303.10130)",
+        "[Noy, Zhang, 2023, 《Science（斯坦福 Scale 项目页收录摘要）》, Experimental evidence on the productivity effects of generative artificial intelligence](https://scale.stanford.edu/publications/experimental-evidence-productivity-effects-generative-artificial-intelligence)",
+        "[Humlum, Vestergaard, 2025, 《NBER Working Paper 33777》, Still Waters, Rapid Currents: Early Labor Market Transformation under Generative AI](https://www.nber.org/papers/w33777)"
+      ]
+    },
+    {
+      "id": "x01-05",
+      "title": "收入不平等：测量、成因与 r>g",
+      "l1": {
+        "definition": "收入不平等研究收入如何在一国或全球范围内分配：基尼系数（Gini）从 0（绝对平均）到 1（绝对集中），顶端份额（如前 1%、前 10%）刻画“厚尾”。皮凯蒂的 r>g 命题：当资本收益率 r 长期高于经济增长率 g，存量财富的积累快于收入流量增长，财富集中会自我强化。",
+        "analogy": "基尼系数像“分蛋糕均匀度”打分：0 分是每人一块一样大，1 分是一个人端走整个蛋糕。r>g 像滚雪球：钱生钱的速度（r）超过蛋糕做大的速度（g）时，雪球（存量财富）相对越滚越大，后来者只靠工资很难追上。",
+        "image": {
+          "type": "bars",
+          "params": {
+            "items": [
+              { "label": "全球收入：前 10%", "value": 53 },
+              { "label": "全球收入：后 50%", "value": 8 },
+              { "label": "全球财富：前 10%", "value": 75 },
+              { "label": "全球财富：后 50%", "value": 2 }
+            ],
+            "xLabel": "人口组",
+            "yLabel": "占全球总收入/总财富的份额（%）"
+          },
+          "caption": "WIR 2026：全球收入前 10% 拿 53%、后 50% 拿 8%；财富更集中——前 10% 持有约四分之三、后一半人仅约 2%"
+        }
+      },
+      "case": {
+        "event": "《世界不平等报告 2026》（World Inequality Report 2026）发布",
+        "facts": "世界不平等实验室（WIL）2026 年发布第三版报告：全球收入前 10%（约 5.6 亿成年人）拿走 53% 的全球收入，后 50%（约 28 亿人）仅获得 8%；财富层面更极端——前 10% 拥有约四分之三（75%）的全球私人财富，后一半人仅持有约 2%。",
+        "source_ref": "[World Inequality Lab（世界不平等实验室）, 2026, 《World Inequality Report 2026》, Executive Summary / Global Economic Inequality](https://wir2026.wid.world/insight/executive-summary/)",
+        "explain": "这组数字恰好对应本节的两套测量与一个机制：份额与基尼指标把“53% 对 8%”变成可比较的分布画像；财富份额（75% 对 2%）比收入份额极端得多，因为存量财富既来自流量储蓄，又来自资本收益的复利积累——这正是 r>g 机制的现实投影：只要资本收益率持续高于增长率，财富/收入比与财富集中度便趋于上升，不平等从收入维度沉淀为更顽固的财富维度。"
+      },
+      "l2": {
+        "derivation": "测量→成因→机制的推导链条：\n1) 测量：洛伦兹曲线累计人口-累计收入；基尼 G = 弓形面积/三角形面积；辅以分位数比（P90/P10）与 Top10%/Top1% 份额。顶端收入近似帕累托分布：P(X>x) = (x_m/x)^α，尾参数 α 越小尾部越厚。\n2) 成因清单：技能偏向型技术进步与自动化、全球化与贸易冲击、劳动份额下降（资本份额上升）、教育溢价、税制再分配减弱、遗产与婚姻等家庭结构因素。\n3) r>g 的恒等式链：稳态财富/收入比 β = s/g（s 为储蓄率）→ 资本收入份额 α = r·β = r·s/g → g 越低且 r 越高，资本所得占比越大，既有财富自我强化。\n4) 测量口径决定结论：税表收入 vs 国民账户分配（DINA）、税前 vs 税后转移后，趋势可以大不相同——本页前沿部分正是这场口径之争。",
+        "exam_tips": "会算：五等分数据的基尼近似、β = s/g 与 α = r·s/g 的代入计算。必背辨析：r>g 是长期历史倾向假说而非“定律”；库兹涅茨倒 U 曲线在 1980 年后的发达国家失效；税前与税后转移后的不平等趋势差异。本页 WIR 2026 数字可直接做计算题素材（如中间 40% 份额 = 100 − 53 − 8）。",
+        "pitfalls": [
+          "❌ 误区：基尼系数上升 = 所有人的收入都变少了 → ✅ 纠正：基尼只衡量相对分布，平均收入上升时基尼也可能上升；绝对水平与相对分布要分开看。",
+          "❌ 误区：r>g 意味着不平等必然无限扩大 → ✅ 纠正：它是倾向性机制而非定律——遗产分割、累进税制、财富冲击与新财富创造都会削弱分化；经验上财富集中度还取决于资本收益的异质性（见本页前沿研究）。"
+        ]
+      },
+      "l3": {
+        "math": "r>g 的恒等式分解（Piketty-Zucman 框架）：β = W/Y（财富/收入比），α = r·β（资本收入份额），封闭经济稳态 β* = s/g（存量-流量恒等式的直接推论）。代数：g 下降 → β* 上升 → 若 r 不变则 α 上升；微观层面财富动态 w_{t+1} = (1 + r − g)·w_t + 劳动储蓄，当 r − g > 0 时存量项的相对增长系数大于 1，既有财富的位置自我强化（凸性积累）。帕累托尾部：P(X>x) = (x_m/x)^α；尾指数 α 与 r − g、储蓄率及收益异质性正相关（Gabaix 等的机制）：r − g 越大，α 越小、尾部越厚；帕累托段基尼 = 1/(2α − 1)（要求 α > 1/2）。综合结论：测量（α、β、G）与机制（r、g、s、收益异质性）在同一恒等式体系中闭合。"
+      },
+      "animation": {
+        "type": "lorenz",
+        "params": {
+          "shares": [5, 10, 15, 20, 50]
+        },
+        "description": "拖动五等分组的收入占比，观察洛伦兹曲线如何弯向更不平等、基尼系数如何随之变化（示例数据）。",
+        "interactions": [
+          "拖动任一五等分占比，曲线与基尼数值实时变化；把底层两组占比调小、顶层调大，可复现“厚尾”形态"
+        ]
+      },
+      "quiz": [
+        {
+          "level": "L1",
+          "stem": "某国居民收入基尼系数为 0.46，这大致说明什么？",
+          "options": [
+            "该国收入绝对平均分配",
+            "该国收入分配存在较明显的差距（0 = 绝对平均，1 = 绝对集中）",
+            "该国前 10% 的人拿走了 46% 的收入",
+            "该国失业率为 4.6%"
+          ],
+          "answer": 1,
+          "explain": "基尼系数是 0 到 1 之间的分布均匀度指标，0.46 属于偏高水平（国际警戒线常被引用为 0.4 附近）。它是整体分布的概括，不能直接换算成“前 10% 拿多少”（那是份额指标），也与失业率无关。",
+          "hint": "基尼衡量的是“分蛋糕的均匀程度”，不是某个具体群体的份额。"
+        },
+        {
+          "level": "L2",
+          "stem": "（WIR 2026 案例）报告显示：全球收入前 10% 拿走 53%、后 50% 仅获得 8%。据此，全球收入中间 40% 人群的收入份额约为多少？",
+          "options": [
+            "47%",
+            "45%",
+            "39%",
+            "8%"
+          ],
+          "answer": 2,
+          "explain": "100% − 53% − 8% = 39%。这类“份额相减”正是分位数分析的基本操作：把人口按收入排序切成组，各份额加总必为 100%；WIR 报告本身未直接给出中间 40% 的数字，用余数法即可得到。",
+          "hint": "三组人口覆盖全部收入：前 10% + 中间 40% + 后 50% = 100%。"
+        },
+        {
+          "level": "L3",
+          "stem": "在 Piketty-Zucman 框架下，稳态财富/收入比 β* = s/g，资本收入份额 α = r·β*。若储蓄率 s = 10%、长期增长率 g = 2%、资本收益率 r = 4%，则稳态资本收入份额约为多少？",
+          "options": [
+            "20%",
+            "10%",
+            "40%",
+            "5%"
+          ],
+          "answer": 0,
+          "explain": "β* = s/g = 0.10/0.02 = 5；α = r·β* = 0.04 × 5 = 0.20，即 20%。该恒等式揭示了 r>g 的分配含义：g 越低（β* 越高）且 r 越高，国民收入中资本所得占比越大——财富集中有了机制支撑。",
+          "hint": "分两步：先算 β* = s/g，再代入 α = r·β*，注意都用小数运算。"
+        }
+      ],
+      "frontier": [
+        {
+          "finding": "研究问题：用更完整的税表与国民账户口径，美国不平等到底涨了多少？核心发现：修正企业利润归属、退休账户、政府转移与税收累进、家庭规模等因素后，最高收入份额的上升比经典税表研究小得多：2014 年税前最高 1% 份额为 13.1%（对比 Piketty-Saez 口径的 21.5%）；1962–2019 年税后最高 1% 份额上升不足 1 个百分点。对教材的修正：美国不平等“爆炸式上升”的幅度对测量口径高度敏感，政府再分配显著拉平了税后曲线。",
+          "controversy": "与 Piketty、Saez、Zucman 直接交锋（PSZ 于 2024 年发表评论反驳其口径处理），不平等测量之争学界尚有争议。",
+          "citation": "[Auten, Splinter, 2024, 《Journal of Political Economy（作者网站论文页）》, Income Inequality in the United States: Using Tax Data to Measure Long-Term Trends](https://www.davidsplinter.com/)"
+        },
+        {
+          "finding": "研究问题：资本化法假设“资产收益率随财富递增”是否高估了顶层财富？核心发现：允许债券、股票等收益率在财富水平之间异质后，估计美国最高 1%、0.1%、0.01% 的财富份额分别上升 7.6、5.1、3.0 个百分点至 31.5%、15.0%、7.0%——顶层确在集中，但显著低于 Saez-Zucman 等先前资本化估计（该法因“财富与收益率相关”而存在偏差）；最高 1% 的财富几乎与后 90% 或 90–99 分位层相当。对教材的补充：r>g 的强度取决于“谁的 r 更高”——收益异质性是财富分化的关键参数。",
+          "controversy": "资本化法与调查法、遗产法对顶层财富的估计差距仍无定论，学界尚有争议。",
+          "citation": "[Smith, Zidar, Zwick, 2021, 《NBER Working Paper 29374（QJE 2023 刊出）》, Top Wealth in America: New Estimates and Implications for Taxing the Rich](https://www.nber.org/papers/w29374)"
+        },
+        {
+          "finding": "研究问题：自动化如何同时影响收入与财富不平等？核心发现：提出一条新机制——自动化不仅替代低技能劳动、压低其工资，还抬高资本回报 r，而高回报沿财富分布不均地落在富有人群手中，即“自动化通过财富回报加剧不平等”；自动化因此可解释部分收入/财富不平等与总量趋势（劳动份额下降、低技能实际工资停滞）。对教材的补充：把上一页的任务模型与 r>g 的分配动态连成一条因果链：技术 → 资本份额与回报 → 财富集中。",
+          "controversy": "",
+          "citation": "[Moll, Rachel, Restrepo, 2021, 《NBER Working Paper 28440（Econometrica 2022 刊出）》, Uneven Growth: Automation's Impact on Income and Wealth Inequality](https://www.nber.org/papers/w28440)"
+        }
+      ],
+      "links": {
+        "prev": [
+          "x01-04|上一页：AI 与劳动力市场——自动化经由资本回报汇入 r>g 的分配动态",
+          "m08-05|洛伦兹曲线与基尼系数：本页测量工具的基础版"
+        ],
+        "next": []
+      },
+      "references": [
+        "[World Inequality Lab（世界不平等实验室）, 2026, 《World Inequality Report 2026》, Executive Summary / Global Economic Inequality](https://wir2026.wid.world/insight/executive-summary/)",
+        "[Auten, Splinter, 2024, 《Journal of Political Economy（作者网站论文页）》, Income Inequality in the United States: Using Tax Data to Measure Long-Term Trends](https://www.davidsplinter.com/)",
+        "[Smith, Zidar, Zwick, 2021, 《NBER Working Paper 29374（QJE 2023 刊出）》, Top Wealth in America: New Estimates and Implications for Taxing the Rich](https://www.nber.org/papers/w29374)",
+        "[Moll, Rachel, Restrepo, 2021, 《NBER Working Paper 28440（Econometrica 2022 刊出）》, Uneven Growth: Automation's Impact on Income and Wealth Inequality](https://www.nber.org/papers/w28440)"
+      ]
+    }
+  ]
+}
