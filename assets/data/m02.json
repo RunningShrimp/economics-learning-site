@@ -1,0 +1,657 @@
+{
+  "chapter": "m02",
+  "title": "供给与需求",
+  "points": [
+    {
+      "id": "m02-01",
+      "title": "需求曲线与需求定律",
+      "l1": {
+        "definition": "需求（demand）指在其他条件不变时，每一价格水平下消费者愿意并且能够购买的商品数量；需求定律（law of demand）说：价格越高，需求量越少，所以需求曲线向右下方倾斜。",
+        "analogy": "想象奶茶店搞第二杯半价：价格一降，你从买一杯变成买两杯——这就是价格下降、需求量增加。再想象演唱会门票只印 5 万张，而想看的人有几百万：价格被压得低于市场水平时，想买的人远多于票的数量——需求量随价格反向变动。",
+        "image": {
+          "type": "two-lines-intersection",
+          "params": {
+            "aLabel": "需求 D",
+            "aDir": "down",
+            "bLabel": "供给 S",
+            "bDir": "up",
+            "xLabel": "数量 Q",
+            "yLabel": "价格 P",
+            "pointLabel": "均衡 E"
+          },
+          "caption": "需求曲线向右下方倾斜：价格越高，消费者想买的数量越少。"
+        }
+      },
+      "case": {
+        "event": "2022 年 Taylor Swift《The Eras Tour》Ticketmaster 预售挤兑事件",
+        "facts": "2022 年 11 月 15 日，《The Eras Tour》美国巡演在 Ticketmaster 开启 Verified Fan 预售，当天售出超过 200 万张票，该公司称这是平台史上艺术家单日售票最高纪录；约 350 万人注册 Verified Fan，是 Ticketmaster 史上最大规模注册。11 月 17 日，Ticketmaster 取消原定 11 月 18 日的公开售票，给出的理由是『票务系统需求异常高，且剩余票量不足以满足这一需求』。",
+        "source_ref": "[CBS News(转载 CNN), 2022, 《CBS News Philadelphia》, Ticketmaster cancels Taylor Swift's Eras Tour public sale](https://www.cbsnews.com/philadelphia/news/ticketmaster-taylor-swift-eras-tour-public-sale-canceled)",
+        "explain": "票面价格被固定在远低于市场出清的水平，需求量（350 万注册者与数亿次的系统请求）远超固定供给（52 场约 200 万张票），出现典型的超额需求：排队、抢票、黄琴高价转售都是短缺的非价格表现。这正说明需求定律刻画的是『意愿购买量与价格反向变动』——价格被人为压低时，愿意购买的人更多，稀缺性并未消失，只是改由排队和抽签来配给。"
+      },
+      "l2": {
+        "derivation": "① 线性需求常写作反需求函数 P = a - bQ（a>0, b>0），等价于 Q = (a-P)/b，b 越大曲线越平缓。② 关键区分：价格 P 自身变化 → 沿同一条需求曲线移动，叫『需求量的变动』；收入、偏好、替代品价格、预期、买者数量等非价格因素变化 → 整条曲线移动，叫『需求的变动』。③ 例：P = 100 - 2Q，当 P 由 30 降到 20，Q 由 35 升到 40，这 5 单位的增加是需求量变动；若收入上升使函数变为 P = 110 - 2Q，同样的价格下每个 Q 都更大，这才是需求增加（曲线右移）。④ 市场需求是个人需求的水平加总：Q(P) = Q₁(P) + Q₂(P) + …，因此买者人数增加也会使市场需求曲线右移。",
+        "exam_tips": "考研单选高频：『价格下降→需求量增加』是沿曲线移动，不是需求增加；『收入上升→需求增加』才是曲线右移。判断题里看到『价格下降导致需求曲线右移』直接判错。另外记住需求定律的例外（吉芬品、炫耀性商品）只出现在特殊偏好或极低收入情形，一般不推翻定律本身。",
+        "pitfalls": [
+          "❌误区：需求增加 = 需求量增加，两者可混用 → ✅纠正：需求量变动是价格变化引起的『沿曲线移动』；需求变动是收入、偏好等引起的『整条曲线移动』，图形与含义都不同。",
+          "❌误区：价格上升使人买得少，所以价格上升会导致需求曲线左移 → ✅纠正：价格是需求曲线的坐标轴变量，价格变化只引起曲线上点的移动，曲线本身不因价格而移动。"
+        ]
+      },
+      "l3": {
+        "math": "反需求 P(Q) = a - bQ，需求定律 ⇔ dQ/dP = -1/b < 0。点弹性 ε = (dQ/dP)·(P/Q) = -P/(bQ)，沿线绝对值随价格递减。市场需求 Q^M(P) = Σᵢ Qᵢ(P)，若个体需求严格递减则市场需求亦严格递减。比较静态：收入 M 进入需求 Q = α - βP + γM，∂Q/∂M = γ（γ>0 为正常品，γ<0 为劣等品）；据此做隐函数求导可得均衡对参数的敏感度（见 m02-03、m02-04）。"
+      },
+      "animation": {
+        "type": "sd-shift",
+        "params": {
+          "demand": { "a": 100, "b": -2 },
+          "supply": { "a": 20, "b": 2 },
+          "draggable": "demand",
+          "xLabel": "Q",
+          "yLabel": "P"
+        },
+        "description": "线性需求 P = 100 - 2Q 与供给 P = 20 + 2Q 构成市场，用鼠标上下拖动需求曲线的截距，模拟收入或偏好变化引起的需求右移/左移。",
+        "interactions": ["上下拖动需求曲线截距改变需求位置", "观察均衡价格与数量的交点如何随需求移动而变化"]
+      },
+      "quiz": [
+        {
+          "level": "L1",
+          "stem": "其他条件不变，某商品价格上升，消费者计划购买的数量减少。经济学把这称为：",
+          "options": [
+            "需求减少，需求曲线整体左移",
+            "供给减少",
+            "需求量减少，沿同一条需求曲线向上移动",
+            "消费者偏好发生了改变"
+          ],
+          "answer": 2,
+          "explain": "价格是需求曲线自己的坐标变量，价格变化只引起『沿曲线的移动』即需求量的变动；只有收入、偏好、相关商品价格等非价格因素变化才会使整条曲线移动。",
+          "hint": "想一想：曲线本身动了吗？还是只是从曲线上一个点滑到另一个点？"
+        },
+        {
+          "level": "L2",
+          "stem": "（案例背景）2022 年 11 月 Taylor Swift 巡演预售一日售出超 200 万张票仍远不能满足需求。设需求函数为 P = 900 - 2Q（P 为美元，Q 为万张）。若主办方将票价固定在 P = 400 美元，市场的需求量为：",
+          "options": ["150 万张", "250 万张", "350 万张", "450 万张"],
+          "answer": 1,
+          "explain": "代入 Q = (900 - 400)/2 = 250 万张。固定价格下需求量（250 万张对应的价格意愿远超票面价）大于实际供给量，因此出现排队、抢票系统崩溃等超额需求现象，这正是本案的核心。",
+          "hint": "把 P = 400 代入需求函数反解 Q：Q = (900 - P)/2。"
+        },
+        {
+          "level": "L3",
+          "stem": "反需求函数为 P = 100 - 2Q。当价格从 P = 30 降到 P = 20 时，下列说法正确的是：",
+          "options": [
+            "需求量从 35 增加到 40，属于需求量的变动（沿曲线移动）",
+            "需求增加，需求曲线整体右移",
+            "需求量从 40 增加到 45，属于需求变动",
+            "需求减少，因为价格下降使消费者不愿购买"
+          ],
+          "answer": 0,
+          "explain": "P=30 时 Q=（100-30)/2=35；P=20 时 Q=（100-20)/2=40。变化完全由价格本身引起，是沿同一条曲线的移动；需求曲线 P = 100 - 2Q 始终没有移动，故不是『需求变动』。",
+          "hint": "先分别算出两个价格下的 Q，再判断是曲线上点的移动还是曲线本身移动。"
+        }
+      ],
+      "frontier": [
+        {
+          "finding": "研究问题：现实中需求曲线到底有多陡，需求定律在的数据里是否『失灵』？Kilian 与 Zhou 利用美国各州对油价冲击向零售油价传导的系统性差异构造新工具变量（shift-share IV），估计 1989–2022 年美国汽油需求价格弹性。核心发现：弹性在 2014 年底前稳定在约 -0.3，2015–16 年升至约 -0.2 并在此后保持稳定，数据不支持『汽油需求弹性自 1980 年代以来已降至接近零』的观点。对教材的补充：大规模因果证据确认需求曲线确实向下倾斜，但其斜率（弹性）会随时间缓慢变化，不能当作永恒常数。",
+          "controversy": "",
+          "citation": "[Kilian & Zhou, 2024, 《Journal of Public Economics》, Heterogeneity in the pass-through from oil to gasoline prices: A new instrument for estimating the price elasticity of gasoline demand](https://doi.org/10.1016/j.jpubeco.2024.105099)"
+        }
+      ],
+      "links": {
+        "prev": [
+          "m01-05|循环流量图中的商品市场，正是供给与需求相遇的地方",
+          "m01-04|十大原理中『价格是看不见的手』引出需求定律"
+        ],
+        "next": [
+          "m02-02|与需求互为镜像的另一侧：供给曲线与供给定律",
+          "m02-03|需求曲线与供给曲线共同决定市场均衡",
+          "m03-01|需求曲线的陡峭程度就是下一章的需求价格弹性"
+        ]
+      },
+      "references": [
+        "[CBS News(转载 CNN), 2022, 《CBS News Philadelphia》, Ticketmaster cancels Taylor Swift's Eras Tour public sale](https://www.cbsnews.com/philadelphia/news/ticketmaster-taylor-swift-eras-tour-public-sale-canceled)",
+        "[Kilian & Zhou, 2024, 《Journal of Public Economics》, Heterogeneity in the pass-through from oil to gasoline prices: A new instrument for estimating the price elasticity of gasoline demand](https://doi.org/10.1016/j.jpubeco.2024.105099)"
+      ]
+    },
+    {
+      "id": "m02-02",
+      "title": "供给曲线与供给定律",
+      "l1": {
+        "definition": "供给（supply）指在其他条件不变时，每一价格水平下生产者愿意并且能够提供的商品数量；供给定律（law of supply）说：价格越高，供给量越大，所以供给曲线向右上方倾斜。",
+        "analogy": "猪肉涨价时，养殖户会留更多母猪繁殖、多喂饲料，年内出栏更多猪——价格越高，愿意卖的数量越多。反过来，如果鸡蛋收购价跌到连饲料钱都不够，养鸡场宁可少养甚至歇业——价格低于成本线，供给量就会收缩。",
+        "image": {
+          "type": "two-lines-intersection",
+          "params": {
+            "aLabel": "需求 D",
+            "aDir": "down",
+            "bLabel": "供给 S",
+            "bDir": "up",
+            "xLabel": "数量 Q",
+            "yLabel": "价格 P",
+            "pointLabel": "均衡 E"
+          },
+          "caption": "供给曲线向右上方倾斜：价格越高，生产者愿意提供的数量越多。"
+        }
+      },
+      "case": {
+        "event": "2022 年美国高致病性禽流感冲击鸡蛋供给",
+        "facts": "据美国农业部经济研究局（USDA ERS），2022 年 2 月起暴发的高致病性禽流感（HPAI）持续袭击蛋鸡群：到 2022 年 12 月底，累计损失超过 4300 万只产蛋鸡，其中 2–6 月损失 3070 万只、9–12 月损失 1260 万只；2022 年 12 月最后一周美国鸡蛋库存比年初低 29%，圣诞前一周蛋价比年初高 267%、比一年前同期高 210%，批发蛋价连续数周创历史新高。",
+        "source_ref": "[USDA Economic Research Service, 2023, 《ERS Charts of Note》, Avian influenza outbreaks reduced egg production, driving prices to record highs in 2022](https://www.ers.usda.gov/data-products/charts-of-note/105576)",
+        "explain": "禽流感扑杀蛋鸡是典型的『供给的非价格因素』冲击：无论市场价格多高，被扑杀的鸡都无法再产蛋，因此整条供给曲线左移，而不是沿曲线移动。库存下降（数量减少）与价格创新高同时出现——价格与数量反向变动，正是供给左移的比较静态特征，用 m02-04 的分析可以严格验证。"
+      },
+      "l2": {
+        "derivation": "① 线性供给写作反供给函数 P = c + dQ（c≥0, d>0），d 越大曲线越陡。② 供给的变动来自投入品价格、技术、预期、税收补贴、生产者数量等：成本上升 → 同一数量下要价更高 → 曲线左移（P = c + dQ 中 c 增大）；技术进步 → 曲线右移。③ 例：鸡蛋市场 D：P = 100 - 2Q，S：P = 20 + 2Q（P 美元/打，Q 亿打）。均衡：100 - 2Q = 20 + 2Q → Q* = 20，P* = 60。④ 禽流感使供给左移为 S′：P = 44 + 2Q，新均衡 100 - 2Q = 44 + 2Q → Q′ = 14，P′ = 72。结论：供给左移 → 价格升（60→72）、数量降（20→14），与 USDA 记录的『库存降、价格升』方向完全一致。",
+        "exam_tips": "考点一：供给量变动（沿曲线）vs 供给变动（曲线移动），对称于需求一侧。考点二：给出两点求线性供给函数（高考研必会）：过 (Q₁,P₁)、(Q₂,P₂) 求 d = ΔP/ΔQ，再回代求 c。考点三：生产成本上升、税收、产出价格预期等如何移动供给曲线，注意『预期未来价格上升』会使当期供给左移。",
+        "pitfalls": [
+          "❌误区：成本上升使供给曲线『向下移动』，因为生产更贵了 → ✅纠正：成本上升使同一数量下厂商要价更高，供给曲线向上/向左移动（截距 c 增大），均衡价格升高、数量减少。",
+          "❌误区：供给就是产量，两者完全一样 → ✅纠正：供给是『每一价格下愿意且能够提供的数量』（整条计划表），产量只是某一实际价格下的一个点。"
+        ]
+      },
+      "l3": {
+        "math": "反供给 P = c + dQ，d>0 ⇔ dQ/dP = 1/d > 0（供给定律）。完全竞争下短期供给曲线由行业边际成本曲线的水平加总导出（P = MC，见 m06），故成本参数 θ（如饲料价格）上升使 MC 上移 ⇔ c(θ) 递增、∂c/∂θ > 0。市场供给 Q^S(P) = Σⱼ Qʲ(P)。供给冲击的比较静态：∂Q*/∂c = -1/(b+d) < 0，∂P*/∂c = b/(b+d) > 0（b 为需求斜率参数，见 m02-03 的代数框架），说明成本冲击必然『量减价升』。"
+      },
+      "animation": {
+        "type": "sd-shift",
+        "params": {
+          "demand": { "a": 80, "b": -1 },
+          "supply": { "a": 10, "b": 3 },
+          "draggable": "supply",
+          "xLabel": "Q",
+          "yLabel": "P"
+        },
+        "description": "线性供给 P = 10 + 3Q 与需求 P = 80 - Q 构成市场，上下拖动供给曲线截距，模拟禽流感（左移）或技术进步（右移）对鸡蛋这类市场的冲击。",
+        "interactions": ["上下拖动供给曲线截距使供给左移或右移", "观察均衡点沿需求曲线滑动：左移时价格升、数量降"]
+      },
+      "quiz": [
+        {
+          "level": "L1",
+          "stem": "供给定律说的是：",
+          "options": [
+            "其他条件不变，价格越高，生产者愿意提供的数量越多",
+            "价格越高，消费者买得越少",
+            "价格越高，单位生产成本越高",
+            "供给越多，价格必然越低"
+          ],
+          "answer": 0,
+          "explain": "供给定律描述价格与供给量的同向关系：价格上升激励生产者多提供，供给曲线因此向右上方倾斜。注意主体是生产者、变量是价格与供给量。",
+          "hint": "站在卖方视角想：价格高时你愿意多生产还是少生产？"
+        },
+        {
+          "level": "L2",
+          "stem": "（案例背景）2022 年美国禽流感损失超 4300 万只产蛋鸡，鸡蛋库存下降、批发价创新高。设需求 P = 100 - 2Q，原供给 P = 20 + 2Q；禽流感使供给移动为 P = 44 + 2Q。新的均衡价格与数量为：",
+          "options": ["P = 60，Q = 20", "P = 72，Q = 14", "P = 72，Q = 20", "P = 60，Q = 14"],
+          "answer": 1,
+          "explain": "令 100 - 2Q = 44 + 2Q，得 56 = 4Q，Q = 14；代回 P = 100 - 28 = 72。供给左移使均衡从（20，60）变为（14，72）：价格升、数量降，正是供给冲击的标志（若误以为只有价格变、数量不变，就选了干扰项）。",
+          "hint": "用新供给曲线与需求曲线联立求解，Q 与 P 都要重新算。"
+        },
+        {
+          "level": "L3",
+          "stem": "某商品的线性供给曲线经过点（Q=10，P=40）与（Q=20，P=60），可写作 P = c + dQ。当 Q = 25 时，价格为：",
+          "options": ["60", "65", "70", "75"],
+          "answer": 2,
+          "explain": "d = ΔP/ΔQ =（60-40)/(20-10) = 2；代回 P = 40 + 2×(10-10)…即 c = 40 - 2×10 = 20，供给为 P = 20 + 2Q。Q = 25 时 P = 20 + 50 = 70。两点定线是考研供给计算的基本功。",
+          "hint": "先用两点求斜率 d = ΔP/ΔQ，再代入任一点求截距 c。"
+        }
+      ],
+      "frontier": [
+        {
+          "finding": "研究问题：全球供应链中断对 2021 年通胀的贡献有多大？Santacreu 与 LaBelle（圣路易斯联储）利用 44 国 PMI 数据中的未完成订单积压与供应商交货时间度量瓶颈，并结合各行业对各国投入品的采购暴露程度做因果推断。核心发现：外部瓶颈暴露显著推高了美国行业 PPI 通胀；反事实计算显示，若各国瓶颈保持 2019 年的路径，2021 年 1 月美国制造业 PPI 通胀会低 2 个百分点、11 月会低 20 个百分点。对教材的补充：把『供给左移 → 价格上升』从单一市场推广到全球价值链传导，说明微小冲击可沿生产链放大。",
+          "controversy": "",
+          "citation": "[Santacreu & LaBelle, 2022, 《Federal Reserve Bank of St. Louis Review》, Global Supply Chain Disruptions and Inflation During the COVID-19 Pandemic](https://www.stlouisfed.org/publications/review/2022/02/07/global-supply-chain-disruptions-and-inflation-during-the-covid-19-pandemic)"
+        }
+      ],
+      "links": {
+        "prev": [
+          "m02-01|供给定律与需求定律互为镜像，共同构成市场两翼"
+        ],
+        "next": [
+          "m02-03|供给曲线与需求曲线相交，得到市场均衡",
+          "m03-03|供给曲线的陡峭程度即供给弹性，随时间维度变化",
+          "m05-01|供给曲线背后的生产函数与边际产量递减"
+        ]
+      },
+      "references": [
+        "[USDA Economic Research Service, 2023, 《ERS Charts of Note》, Avian influenza outbreaks reduced egg production, driving prices to record highs in 2022](https://www.ers.usda.gov/data-products/charts-of-note/105576)",
+        "[Santacreu & LaBelle, 2022, 《Federal Reserve Bank of St. Louis Review》, Global Supply Chain Disruptions and Inflation During the COVID-19 Pandemic](https://www.stlouisfed.org/publications/review/2022/02/07/global-supply-chain-disruptions-and-inflation-during-the-covid-19-pandemic)"
+      ]
+    },
+    {
+      "id": "m02-03",
+      "title": "市场均衡与价格机制",
+      "l1": {
+        "definition": "市场均衡（market equilibrium）指需求量恰好等于供给量的状态，对应的价格叫均衡价格 P*，数量叫均衡数量 Q*；当价格偏离 P* 时，短缺或过剩会推动价格回归，这就是价格机制（价格作为信号与激励）的自发调节。",
+        "analogy": "像停车场找车位：车位充裕（过剩）时管理员降价吸引车辆，车位爆满（短缺）时提价疏导需求，最终停进来的车数正好等于车位数。又像菜市场收摊前的降价甩卖：卖不完的菜（过剩）逼着摊主降价，降价又把顾客吸引过来，直到卖光。",
+        "image": {
+          "type": "two-lines-intersection",
+          "params": {
+            "aLabel": "需求 D",
+            "aDir": "down",
+            "bLabel": "供给 S",
+            "bDir": "up",
+            "xLabel": "数量 Q",
+            "yLabel": "价格 P",
+            "pointLabel": "均衡 E(P*, Q*)"
+          },
+          "caption": "需求曲线与供给曲线的交点 E 决定均衡价格 P* 与均衡数量 Q*。"
+        }
+      },
+      "case": {
+        "event": "2021 年美国木材市场的暴涨与回归",
+        "facts": "2021 年春季，锯木厂停产限制供给，叠加居家装修与建房需求激增：木材期货 5 月 7 日收于每千板英尺 1,670.50 美元的历史峰值，约为 2020 年 4 月疫情期低点的 6 倍多；随后供给回升、装修需求降温，6 月单月下跌超过 40%（为 1978 年有记录以来最大月跌幅），6 月底价格已跌至约 710 美元/千板英尺。全美住宅建筑商协会（NAHB）估算，木材短缺一度使美国新建独栋住宅平均造价上涨近 3.6 万美元。",
+        "source_ref": "[Yun Li, 2021, 《CNBC》, Lumber prices dive more than 40% in June, biggest monthly drop on record](https://www.cnbc.com/2021/06/30/lumber-prices-dive-more-than-40percent-in-june-biggest-monthly-drop-on-record.html)",
+        "explain": "木材价格先冲顶后腰斩，完整演示了价格机制的两段调节：需求激增 + 供给受限时，价格飙升发出『多生产』的信号，锯木厂复工、供给增加；高价同时抑制了部分装修需求。两股力量共同作用，价格从 1,670.5 美元回落到约 710 美元，市场向新的均衡回归——高价既是短缺的症状，也是消除短缺的药方。"
+      },
+      "l2": {
+        "derivation": "① 求解均衡：D：P = a - bQ，S：P = c + dQ。令 a - bQ = c + dQ → Q* = (a - c)/(b + d)，代回得 P* = (ad + bc)/(b + d)。② 存在性要求 a > c（需求愿意支付的最高价高于供给愿意接受的最低价）。③ 短缺与过剩：P < P* 时 Qd > Qs，出现短缺，买方竞价使价格上升；P > P* 时 Qs > Qd，出现过剩，卖方降价去库存。④ 数值例：a=1800, b=2, c=460, d=2 → Q* = (1800-460)/4 = 335，P* = 1130。若价格定为 1400，则 Qd=200、Qs=470，过剩 270，价格有下行压力。",
+        "exam_tips": "均衡计算是考研计算题第一块基石：务必熟记 Q* 与 P* 公式，并用『a>c』检查经济含义。简答题常问『价格机制如何配置资源』：答三点——信号（稀缺程度）、激励（引导生产与消费）、配给（把商品分配给支付意愿最高者）。判断题：『均衡意味着市场不再有任何交易发生』是错的，均衡是不存在变动的趋势。",
+        "pitfalls": [
+          "❌误区：短缺会永久存在，市场对此无能为力 → ✅纠正：只要价格可以自由调整，短缺会推动价格上升、过剩推动价格下降，价格机制使市场趋向均衡；持久短缺通常源于价格被管制（见 m02-05）。",
+          "❌误区：均衡价格由需求或供给单方面决定 → ✅纠正：P* 与 Q* 由两条曲线共同决定，任何一侧移动都会改变均衡（这正是 m02-04 的内容）。"
+        ]
+      },
+      "l3": {
+        "math": "由 a - bQ = c + dQ 解得 Q* = (a-c)/(b+d)，P* = (ad+bc)/(b+d)。比较静态导数：∂Q*/∂a = ∂Q*/∂c 的相反数结构——∂Q*/∂a = 1/(b+d) > 0，∂P*/∂a = d/(b+d) > 0；∂Q*/∂c = -1/(b+d) < 0，∂P*/∂c = b/(b+d) > 0。价格调整的动态可用假想竞价 dp/dt = λ[Qd(P) - Qs(P)]，λ>0，在 dQd/dP<0、dQs/dP>0 条件下均衡局部稳定。超额需求 Z(P) = Qd(P) - Qs(P) 严格递减保证唯一均衡。"
+      },
+      "animation": {
+        "type": "sd-shift",
+        "params": {
+          "demand": { "a": 100, "b": -2 },
+          "supply": { "a": 20, "b": 2 },
+          "draggable": "demand",
+          "xLabel": "Q",
+          "yLabel": "P"
+        },
+        "description": "需求 P = 100 - 2Q、供给 P = 20 + 2Q，均衡为 P* = 60、Q* = 20；拖动需求曲线，观察交点如何移向新均衡。",
+        "interactions": ["上下拖动需求曲线", "读取均衡点坐标变化，验证短缺/过剩如何推动价格回归"]
+      },
+      "quiz": [
+        {
+          "level": "L1",
+          "stem": "市场均衡指的是：",
+          "options": [
+            "价格固定不变的状态",
+            "供给和需求都等于零",
+            "需求量等于供给量，价格没有进一步变动的趋势",
+            "由政府确定的价格"
+          ],
+          "answer": 2,
+          "explain": "均衡的定义是 Qd = Qs：在此价格下买卖双方的计划一致，不存在推动价格变化的超额需求或超额供给。均衡不等于价格不变，也不涉及政府定价。",
+          "hint": "抓关键词：『相等』与『没有变动趋势』。"
+        },
+        {
+          "level": "L2",
+          "stem": "（案例背景）2021 年美国木材期货 5 月 7 日收于峰值 1,670.5 美元/千板英尺，6 月底跌至约 710 美元/千板英尺。从峰值到 6 月底，跌幅约为：",
+          "options": ["约 40%", "约 50%", "约 55%", "约 57.5%"],
+          "answer": 3,
+          "explain": "跌幅 =（1670.5 - 710)/1670.5 = 960.5/1670.5 ≈ 57.5%。注意 6 月『单月』跌幅超 40% 与『从峰值累计』跌幅 57.5% 是两个不同口径，考试中常被混用设错。",
+          "hint": "跌幅的分母是期初（峰值）价格，不是期末价格。"
+        },
+        {
+          "level": "L3",
+          "stem": "市场需求 Qd = 60 - 2P，市场供给 Qs = 4P - 12。均衡价格 P* 与均衡数量 Q* 为：",
+          "options": [
+            "P* = 10，Q* = 40",
+            "P* = 12，Q* = 36",
+            "P* = 14，Q* = 32",
+            "P* = 15，Q* = 30"
+          ],
+          "answer": 1,
+          "explain": "令 60 - 2P = 4P - 12 → 72 = 6P → P* = 12；代回 Q* = 60 - 24 = 36。检验：Qs = 48 - 12 = 36，两式一致。",
+          "hint": "把两条函数联立，注意这里是 Q 关于 P 的形式，解出 P 后再代回求 Q。"
+        }
+      ],
+      "frontier": [
+        {
+          "finding": "研究问题：动态调价（如网约车溢价定价）这种现代价格机制是否真的提高了效率、谁受益？Castillo（2025）用 Uber 数据构建包含需求、供给与匹配技术的空间均衡模型，与『统一定价』反事实比较。核心发现：溢价定价使总福利提高相当于毛收入的 2.15%，其中乘客剩余增加 3.57%、司机剩余减少 0.98%、平台当期利润减少 0.50%；各收入水平的乘客都受益，但工作时间长的司机受损最大（尤其是女性司机）。对教材的补充：价格不仅出清市场，还同时在市场各方之间重新分配剩余——效率与分配必须分开评价。",
+          "controversy": "分配效应存在争议：总福利改进的另一面是部分司机（尤其长途工作的女性司机）剩余受损，说明价格机制的效率结论不自动等于对所有参与者都帕累托改进。",
+          "citation": "[Castillo, 2025, 《Econometrica》, Who Benefits from Surge Pricing?](https://www.econometricsociety.org/publications/econometrica/2025/09/01/Who-Benefits-from-Surge-Pricing)"
+        }
+      ],
+      "links": {
+        "prev": [
+          "m02-01|需求曲线：均衡的一翼",
+          "m02-02|供给曲线：均衡的另一翼"
+        ],
+        "next": [
+          "m02-04|均衡被打破后向何处移动：比较静态分析",
+          "m02-06|均衡位置的福利含义：总剩余最大化",
+          "x01-02|平台算法定价是价格机制在数字经济中的现代形态"
+        ]
+      },
+      "references": [
+        "[Yun Li, 2021, 《CNBC》, Lumber prices dive more than 40% in June, biggest monthly drop on record](https://www.cnbc.com/2021/06/30/lumber-prices-dive-more-than-40percent-in-june-biggest-monthly-drop-on-record.html)",
+        "[Castillo, 2025, 《Econometrica》, Who Benefits from Surge Pricing?](https://www.econometricsociety.org/publications/econometrica/2025/09/01/Who-Benefits-from-Surge-Pricing)"
+      ]
+    },
+    {
+      "id": "m02-04",
+      "title": "供求变动：比较静态分析",
+      "l1": {
+        "definition": "比较静态分析（comparative statics）比较冲击前后两个均衡的差异：需求或供给任一侧移动都会打破原均衡，产生新的均衡价格与数量；四个基本结论是——需求右移：P↑Q↑；需求左移：P↓Q↓；供给右移：P↓Q↑；供给左移：P↑Q↓。",
+        "analogy": "像拔河绳上系一个平衡点：需求这一侧加力（绳子左端拉紧），平衡点向『价量齐升』方向移动；供给这一侧松力（成本上升），平衡点则向『价升量减』方向滑动。两侧同时动，就要看谁力气大。",
+        "image": {
+          "type": "two-lines-intersection",
+          "params": {
+            "aLabel": "新需求 D′（右移）",
+            "aDir": "down",
+            "bLabel": "供给 S",
+            "bDir": "up",
+            "xLabel": "数量 Q",
+            "yLabel": "价格 P",
+            "pointLabel": "新均衡 E′"
+          },
+          "caption": "需求右移沿供给曲线上滑：均衡从 E 移到 E′，价格与数量同时上升。"
+        }
+      },
+      "case": {
+        "event": "2022 年俄乌冲突冲击全球小麦市场",
+        "facts": "2022 年 3 月俄罗斯入侵乌克兰后，两个黑海粮食出口大国（合计占全球小麦出口四分之一以上）的发货基本中断：CBOT 小麦期货在截至 3 月 8 日的一周内飙升 31%，并于 3 月 8 日创下每蒲式耳 13.63½ 美元的历史最高价。",
+        "source_ref": "[Karen Braun, 2022, 《Reuters》, Funds dump CBOT wheat shorts on epic rally; end users snap up corn](https://www.reuters.com/markets/europe/funds-dump-cbot-wheat-shorts-epic-rally-end-users-snap-up-corn-braun-2022-03-13/)",
+        "explain": "战争切断黑海出口是教科书式的供给左移：在既定价格下可获得的数量骤减，曲线整体上移。按照供给左移的比较静态，均衡应『价升量减』——现实中价格创历史新高、全球可贸易小麦数量收缩，与模型预测方向完全一致。这一案例也说明比较静态只给方向性预测，幅度取决于弹性（下一章）。"
+      },
+      "l2": {
+        "derivation": "① 单侧移动四情形（沿另一条曲线滑动）：需求右移→沿供给曲线上滑，P↑Q↑；需求左移→P↓Q↓；供给右移→沿需求曲线下滑，P↓Q↑；供给左移→P↑Q↓。② 双侧同时移动的判断表：需求右移+供给右移 → Q 必增、P 不定；需求左移+供给左移 → Q 必减、P 不定；需求右移+供给左移 → P 必涨、Q 不定；需求左移+供给右移 → P 必跌、Q 不定。③ 数值例：D：P = 100 - 2Q，S：P = 20 + 2Q → (Q*, P*) = (20, 60)；禽流感式供给左移 S′：P = 44 + 2Q → (14, 72)：价升量减。④ 步骤口诀：定性判断哪侧移动 → 移动方向 → 套四情形或判断表 → 只给方向，不给幅度。",
+        "exam_tips": "考研选择与判断高频：『同时移动时哪个变量确定』——记结论：同侧同向动，量定价不定；两侧反向动，价定量不定。分析题要求先写『哪个因素变→哪条曲线往哪移→沿哪条曲线滑动→读出 P、Q 变化』四步，缺一步扣分。警惕把『量价同变』误判为需求冲击：量价同向是需求侧，量价反向是供给侧。",
+        "pitfalls": [
+          "❌误区：需求增加且供给增加，价格一定上升 → ✅纠正：两者同时右移时数量必然增加，但价格方向取决于两条曲线相对移动幅度，可能上升、下降或不变。",
+          "❌误区：看到价格大涨就断定是需求增加所致 → ✅纠正：供给左移同样使价格大涨且数量下降；应先观察数量是增是减（量价同向→需求侧，量价反向→供给侧），再下结论。"
+        ]
+      },
+      "l3": {
+        "math": "在 D：P = a - bQ，S：P = c + dQ 框架下比较静态：需求截距 a 上升（右移 h）→ ΔP* = d·h/(b+d) > 0，ΔQ* = h/(b+d) > 0；供给截距 c 上升（左移 k）→ ΔP* = b·k/(b+d) > 0，ΔQ* = -k/(b+d) < 0。双侧同时：ΔP* = (d·h + b·k)/(b+d)，ΔQ* = (h - k)/(b+d)——当 h、k 同时为正（需求右移+供给左移）时 ΔP* 必为正而 ΔQ* 符号不定，与判断表一致。把同一逻辑应用到 PCE 的 100 多个分类（价格与数量意外变动的符号识别需求/供给冲击），即为 Shapiro 分解的微观基础。"
+      },
+      "animation": {
+        "type": "sd-shift",
+        "params": {
+          "demand": { "a": 90, "b": -2 },
+          "supply": { "a": 30, "b": 2 },
+          "draggable": "supply",
+          "xLabel": "Q",
+          "yLabel": "P"
+        },
+        "description": "以小麦市场为原型：上下拖动供给曲线模拟战争导致供给左移/恢复右移，观察均衡沿需求曲线滑动时『价升量减』或『价跌量增』。",
+        "interactions": ["上下拖动供给曲线截距", "对比移动前后均衡点，验证供给左移时价格升、数量降"]
+      },
+      "quiz": [
+        {
+          "level": "L1",
+          "stem": "消费者收入增加使正常品需求右移，同时技术进步使供给右移。可以确定的是：",
+          "options": [
+            "价格上升，数量不变",
+            "数量增加，价格变化不确定",
+            "价格下降，数量减少",
+            "价格与数量都不变"
+          ],
+          "answer": 1,
+          "explain": "需求右移与供给右移都使均衡数量增加，但对价格的作用方向相反（一推高一压低），净效应取决于移动幅度，因此价格不确定。",
+          "hint": "想想两侧同时加力/卸力时，哪个变量两边都指向同一方向？"
+        },
+        {
+          "level": "L2",
+          "stem": "（案例背景）2022 年 3 月俄乌出口中断，CBOT 小麦期货一周飙升 31% 并创每蒲式耳 13.63½ 美元历史新高。用供求模型判断，这一冲击属于哪种变动、均衡如何变化：",
+          "options": [
+            "供给左移：价格上升，数量减少",
+            "需求左移：价格下降，数量减少",
+            "供给右移：价格下降，数量增加",
+            "需求右移：价格上升，数量增加"
+          ],
+          "answer": 0,
+          "explain": "黑海出口中断使既定价格下可购买的世界小麦数量减少，是供给曲线左移；其比较静态特征是『价升量减』，与价格创历史新高、贸易量收缩的事实一致。若误判为需求冲击，就会错把量减价升当成需求右移。",
+          "hint": "关键在识别冲击发生在买方还是卖方：出口中断影响的是『可供给的数量』。"
+        },
+        {
+          "level": "L3",
+          "stem": "需求 Qd = 80 - 2P，供给 Qs = -10 + 3P。收入上升使需求变为 Qd = 100 - 2P，供给不变。新均衡为：",
+          "options": [
+            "P* = 18，Q* = 44（均衡不变）",
+            "P* = 20，Q* = 50",
+            "P* = 22，Q* = 56",
+            "P* = 24，Q* = 48"
+          ],
+          "answer": 2,
+          "explain": "原均衡：80 - 2P = -10 + 3P → P = 18，Q = 44。新均衡：100 - 2P = -10 + 3P → 110 = 5P → P = 22，Q = 100 - 44 = 56。需求右移 20 单位，均衡量增加 12、价格上升 4，符合 P↑Q↑。",
+          "hint": "先算原均衡做参照，再联立新需求与原供给；注意供给函数是 Q 关于 P 的形式。"
+        }
+      ],
+      "frontier": [
+        {
+          "finding": "研究问题：现实中每一类商品的价格波动，到底是需求冲击还是供给冲击造成的？Shapiro（旧金山联储）提出按 PCE 一百多个类别的价格与数量『意外变动』方向做符号识别——量价同向归为需求驱动、量价反向归为供给驱动，从而把 PCE 通胀实时分解为供给驱动与需求驱动两个序列。核心发现（2022 年 4 月）：当年同比 PCE 通胀 6.3% 高于疫情前十年均值 1.5% 约 4.8 个百分点，其中供给因素贡献约 2.5 个百分点（略高于一半），需求因素约 1.4 个百分点（约三分之一），其余为无法归类的模糊部分。对教材的补充：比较静态不再是单一市场的教学工具，而成为央行实时诊断通胀成因的标准框架——供给与需求冲击常常同时发生。",
+          "controversy": "分类存在『模糊』区间：相当一部分类别的量价变动无法被明确标记为供给或需求，说明对现实冲击做二分识别有测量误差。",
+          "citation": "[Shapiro, 2022, 《FRBSF Economic Letter 2022-15》, How Much Do Supply and Demand Drive Inflation?](https://www.frbsf.org/wp-content/uploads/el2022-15.pdf)"
+        },
+        {
+          "finding": "配套工作论文给出方法论细节与动态结论：需求驱动通胀在衰退期趋于下降、货币政策收紧会压低需求驱动成分（100 个基点的意外紧缩在两年内累计使需求驱动通胀贡献降低约 1.5 个百分点），石油供给冲击则推高供给驱动成分，两套序列可被政策制定者实时追踪。",
+          "controversy": "",
+          "citation": "[Shapiro, 2022, 《FRBSF Working Paper 2022-18》, Decomposing Supply and Demand Driven Inflation](https://www.frbsf.org/research-and-insights/publications/working-papers/2022/10/decomposing-supply-and-demand-driven-inflation/)"
+        }
+      ],
+      "links": {
+        "prev": [
+          "m02-03|均衡是比较静态分析的起点"
+        ],
+        "next": [
+          "m02-05|用供求移动看清价格控制的后果",
+          "m03-01|移动幅度的大小取决于弹性",
+          "h07-04|宏观 AD-AS 冲击分析是同一逻辑的总量版"
+        ]
+      },
+      "references": [
+        "[Karen Braun, 2022, 《Reuters》, Funds dump CBOT wheat shorts on epic rally; end users snap up corn](https://www.reuters.com/markets/europe/funds-dump-cbot-wheat-shorts-epic-rally-end-users-snap-up-corn-braun-2022-03-13/)",
+        "[Shapiro, 2022, 《FRBSF Economic Letter 2022-15》, How Much Do Supply and Demand Drive Inflation?](https://www.frbsf.org/wp-content/uploads/el2022-15.pdf)",
+        "[Shapiro, 2022, 《FRBSF Working Paper 2022-18》, Decomposing Supply and Demand Driven Inflation](https://www.frbsf.org/research-and-insights/publications/working-papers/2022/10/decomposing-supply-and-demand-driven-inflation/)"
+      ]
+    },
+    {
+      "id": "m02-05",
+      "title": "价格控制：限价与支持价格",
+      "l1": {
+        "definition": "价格控制是政府直接规定价格的行为：价格上限（price ceiling，限价）规定价格不得高于某一水平，只有低于均衡价格时才有约束力，会造成短缺；价格下限（price floor，支持价格）规定价格不得低于某一水平，只有高于均衡价格时才有约束力，会造成过剩。",
+        "analogy": "价格上限像给演唱会票价设『限价令』：票价比市场水平低，抢的人排成长队（短缺），最后靠排队、抽签、黄牛分配——价格管不到，稀缺性会换个方式冒出来。价格下限像农产品保护价：国家承诺不低于某价收购，粮价被托高后收购仓库堆满粮食（过剩）。",
+        "image": {
+          "type": "matrix",
+          "params": {
+            "rowLabels": ["价格上限（限价）", "价格下限（支持价格）"],
+            "colLabels": ["有效条件", "典型后果", "现实例子"],
+            "cells": [
+              ["低于均衡价格", "短缺、排队与非价格配给", "租金管制、战时物价管制"],
+              ["高于均衡价格", "过剩、库存积压与财政收购", "最低工资、农产品保护价"]
+            ]
+          },
+          "caption": "两类价格控制的生效条件与后果对照。"
+        }
+      },
+      "case": {
+        "event": "柏林『租金盖』（Mietendeckel）租金管制及其被裁无效",
+        "facts": "柏林市政府于 2020 年 2 月实施租金上限法（Mietendeckel），将约 150 万套公寓的租金冻结五年；2020 年 11 月进入第二阶段，强制房东为超过 30 万租户降低租金。2021 年 4 月 15 日，德国联邦宪法法院裁定柏林市无权就此立法，该法整体无效。背景数据：柏林房租自 2008 年以来上涨超过一倍，每年约 4 万人迁入，85% 的居民租房居住。",
+        "source_ref": "[Reuters, 2021, 《Reuters》, German constitutional court strikes down Berlin rent cap](https://www.reuters.com/world/german-constitutional-court-strikes-down-berlin-rent-cap-2021-04-15/)",
+        "explain": "租金上限是把价格压到均衡之下的价格管制：冻结期间受管制公寓租金低于市场水平，需求量（想租的人）超过受管制供给量（愿意出租的房源），短缺以『更难找到房』的形式出现；裁定无效后价格迅速回弹，租客还面临补缴差价。它连同后续实证研究（见前沿）说明：租金管制短期帮了在租的老租客，长期却收缩可供出租的房源、推高市场租金，最终损害包括租客在内的后来者。"
+      },
+      "l2": {
+        "derivation": "① 有效价格上限须低于均衡：上限 Pc < P*。短缺 = Qd(Pc) - Qs(Pc)，实际成交量 = 供给一侧的 Qs(Pc)（短边原则）。② 数值例（柏林式住房市场）：D：P = 900 - 2Q，S：P = 100 + 2Q（P 欧元/月，Q 万套）。均衡：Q* = 200，P* = 500。设上限 Pc = 400：Qd = (900-400)/2 = 250，Qs = (400-100)/2 = 150，短缺 = 100 万套，实际成交仅 150 万套。③ 配给方式随之改变：排队、黑市、歧视性挑选取代价格配给。④ 价格下限 Pf > P*：过剩 = Qs(Pf) - Qd(Pf)，政府常须收购（农产品）或承受失业（最低工资，见 m03/m09）。⑤ 福利评价预告：价格上限使总剩余减少（无谓损失，m02-06 给出计算）。",
+        "exam_tips": "必考三连：①上限低于均衡才有效（下限高于均衡才有效），方向记反全错；②实际成交量取短边（min{Qd, Qs}）；③短缺/过剩 = 两条曲线在上限/下限价格处的水平距离。论述题要写非价格配给（排队成本、黑市、质量下降）与长期动态（供给收缩），并区分『帮了在位者、伤了后来者』。",
+        "pitfalls": [
+          "❌误区：价格上限设在均衡价格之上能保护消费者 → ✅纠正：高于均衡的上限没有约束力，市场照常在均衡成交；有效上限必须低于 P*，且必然带来短缺。",
+          "❌误区：限价总能让穷人住得起房 → ✅纠正：短缺出现后靠排队、关系与黑市配给，受益的主要是恰好住在受管制房里的在位租客；房源收缩与质量下降使新来者与房东双输，整体效率下降。"
+        ]
+      },
+      "l3": {
+        "math": "设 D：P = a - bQ，S：P = c + dQ，P* = (ad+bc)/(b+d)。上限 Pc < P*：短缺 Qd(Pc) - Qs(Pc) = [(a-Pc)/b] - [(Pc-c)/d]；成交 Q = Qs(Pc)。若按支付意愿降序配给，消费者剩余 CS(Pc) = ∫₀^Qs(Pc) D(q)dq - Pc·Qs(Pc)，生产者剩余 PS(Pc) = Pc·Qs(Pc) - ∫₀^Qs(Pc) S(q)dq；总剩余损失即无谓损失 DWL = ∫[Qs(Pc) → Q*] [D(q) - S(q)]dq > 0。下限 Pf > P* 对称：过剩 Qs(Pf) - Qd(Pf)，DWL = ∫[Qd(Pf) → Q*] [D(q) - S(q)]dq。若配给非效率（低支付意愿者获得商品），损失还会叠加配给摩擦，DWL 更大。"
+      },
+      "animation": {
+        "type": "sd-shift",
+        "params": {
+          "demand": { "a": 100, "b": -2 },
+          "supply": { "a": 20, "b": 2 },
+          "draggable": "demand",
+          "xLabel": "Q",
+          "yLabel": "P"
+        },
+        "description": "把需求曲线拖离 P* = 60 的均衡，模拟在『冻结价格』不变的约束下市场条件变化时，短缺如何随需求右移而扩大。",
+        "interactions": ["上下拖动需求曲线，模拟迁入人口增加", "固定价格不变时观察需求量与供给量的缺口（短缺）扩大"]
+      },
+      "quiz": [
+        {
+          "level": "L1",
+          "stem": "价格上限（限价）要真正影响市场，必须设定在：",
+          "options": [
+            "高于均衡价格的水平",
+            "等于均衡价格的水平",
+            "任意水平都一样",
+            "低于均衡价格的水平"
+          ],
+          "answer": 3,
+          "explain": "只有上限低于均衡价格时，法律价格才低于市场本来会形成的价格，从而具有约束力并造成短缺；高于均衡的上限形同虚设。",
+          "hint": "想反例：如果规定『房租每月不得超过 100 万元』，会改变市场吗？"
+        },
+        {
+          "level": "L2",
+          "stem": "（案例背景）柏林 2020 年 2 月冻结约 150 万套公寓租金，2021 年 4 月被判无效。设租赁市场需求 P = 900 - 2Q、供给 P = 100 + 2Q（P 欧元/月，Q 万套），均衡为（200，500）。若上限设为 P = 400 欧元/月，短缺为：",
+          "options": ["50 万套", "100 万套", "150 万套", "200 万套"],
+          "answer": 1,
+          "explain": "Qd = (900-400)/2 = 250，Qs = (400-100)/2 = 150，短缺 = 250 - 150 = 100 万套，实际成交 150 万套（短边）。这解释了管制期柏林『租金降了但更难租到房』的现象。",
+          "hint": "分别把 P = 400 代入需求与供给求两个数量，再相减。"
+        },
+        {
+          "level": "L3",
+          "stem": "D：P = 100 - Q，S：P = Q，均衡为（50，50）。现设上限 Pc = 30，且商品按支付意愿从高到低配给。该管制的无谓损失为：",
+          "options": ["200", "300", "400", "500"],
+          "answer": 2,
+          "explain": "Pc = 30 时成交 Q = Qs = 30。无谓损失 = ∫₃₀⁵⁰ [（100-q) - q]dq = ∫₃₀⁵⁰ (100-2q)dq = [100q - q²]₃₀⁵⁰ =（5000-2500)-(3000-900) = 2500-2100 = 400。（验证：原总剩余 2500；管制后 CS=1650、PS=450、总剩余 2100，损失 400。）",
+          "hint": "DWL 等于被禁止交易的 q∈[Qs(Pc), Q*] 区间上需求与供给曲线之间的三角形面积。"
+        }
+      ],
+      "frontier": [
+        {
+          "finding": "研究问题：租金管制究竟帮了谁、伤了谁？Diamond、McQuade 与 Qian 利用旧金山 1994 年租金管制扩围（是否建于 1980 年前的小型多户住宅被差别覆盖）做准实验研究。核心发现：租金管制使受影响租客的流动性下降 20%、减少了他们被迫迁离旧金山的概率；但被管制的房东把出租房源减少了 15%（改为出售给自住者或重建），受保护租户短期受益，而长期市场租金被推高，最终削弱了政策自身的目标。",
+          "controversy": "学界对租金管制的供给效应尚有争议：旧金山证据显示供给显著收缩，但后续其他城市的研究并非都发现供给下降（见下条加泰罗尼亚证据），结论可能取决于政策设计与当地供给弹性。",
+          "citation": "[Diamond, McQuade & Qian, 2019, 《American Economic Review》, The Effects of Rent Control Expansion on Tenants, Landlords, and Inequality: Evidence from San Francisco](https://www.aeaweb.org/articles?id=10.1257/aer.20181289)"
+        },
+        {
+          "finding": "对立证据：Jofre-Monseny、Martínez-Mazza 与 Segú 研究加泰罗尼亚 2020 年覆盖面近乎全部租赁市场、强制广告与合同标明租金上限的『第二代』租金管制，发现平均已付租金下降约 4%–6%，且未发现租赁单元供给（新签、退租或活跃存量）收缩的证据，提示设计良好、执行到位的租金上限未必压缩租赁市场。",
+          "controversy": "与旧金山（Diamond 等，2019）的供给收缩结论方向相反，说明租金管制的效果在学界尚有争议，可能取决于豁免条款、覆盖范围与市场供给弹性。",
+          "citation": "[Jofre-Monseny, Martínez-Mazza & Segú, 2023, 《Regional Science and Urban Economics》, Effectiveness and supply effects of high-coverage rent control policies](https://ideas.repec.org/a/eee/regeco/v101y2023ics0166046223000510.html)"
+        },
+        {
+          "finding": "与本案直接相关的最新证据：Hahn、Kholodilin、Waltl 与 Fongoni 评估柏林租金冻结（Mietendeckel）的短期效应，发现政策实施后挂牌租金显著下降，但柏林行政边界内外出现显著租金落差、紧邻的非管制市镇租金快速上涨；可供出租房源数量显著减少，其中一部分似乎永久退出了租赁市场；总体上对租客的负面后果大于正面。",
+          "controversy": "",
+          "citation": "[Hahn, Kholodilin, Waltl & Fongoni, 2024, 《Management Science》, Forward to the Past: Short-Term Effects of the Rent Freeze in Berlin](https://ideas.repec.org/a/inm/ormnsc/v70y2024i3p1901-1923.html)"
+        }
+      ],
+      "links": {
+        "prev": [
+          "m02-04|价格控制相当于人为制造供求错位",
+          "m02-03|判断上限是否有效要以均衡价格为参照"
+        ],
+        "next": [
+          "m02-06|价格控制的福利代价要用剩余工具来度量",
+          "h09-02|最低工资是劳动力市场上的价格下限案例"
+        ]
+      },
+      "references": [
+        "[Reuters, 2021, 《Reuters》, German constitutional court strikes down Berlin rent cap](https://www.reuters.com/world/german-constitutional-court-strikes-down-berlin-rent-cap-2021-04-15/)",
+        "[Diamond, McQuade & Qian, 2019, 《American Economic Review》, The Effects of Rent Control Expansion on Tenants, Landlords, and Inequality: Evidence from San Francisco](https://www.aeaweb.org/articles?id=10.1257/aer.20181289)",
+        "[Jofre-Monseny, Martínez-Mazza & Segú, 2023, 《Regional Science and Urban Economics》, Effectiveness and supply effects of high-coverage rent control policies](https://ideas.repec.org/a/eee/regeco/v101y2023ics0166046223000510.html)",
+        "[Hahn, Kholodilin, Waltl & Fongoni, 2024, 《Management Science》, Forward to the Past: Short-Term Effects of the Rent Freeze in Berlin](https://ideas.repec.org/a/inm/ormnsc/v70y2024i3p1901-1923.html)"
+      ]
+    },
+    {
+      "id": "m02-06",
+      "title": "消费者剩余与生产者剩余",
+      "l1": {
+        "definition": "消费者剩余（consumer surplus, CS）是消费者愿意支付的最高价格与实际支付价格之差的加总，等于需求曲线以下、价格线以上的面积；生产者剩余（producer surplus, PS）是实际销售价格与生产者愿意接受的最低价格之差的加总，等于价格线以下、供给曲线以上的面积；两者之和叫总剩余，竞争均衡使总剩余最大。",
+        "analogy": "你本来愿意花 30 元买那杯奶茶，只付了 18 元，省下的 12 元就是你这个买家的消费者剩余；集市上所有买家省下的钱加总就是市场的 CS。对摊主来说，一杯成本 10 元的奶茶卖 18 元，多赚的 8 元是他的生产者剩余——『比心里底线多拿到的部分』。",
+        "image": {
+          "type": "two-lines-intersection",
+          "params": {
+            "aLabel": "需求 D = 支付意愿",
+            "aDir": "down",
+            "bLabel": "供给 S = 边际成本",
+            "bDir": "up",
+            "xLabel": "数量 Q",
+            "yLabel": "价格 P",
+            "pointLabel": "总剩余最大"
+          },
+          "caption": "均衡点左侧，需求与供给之间的楔形面积就是总剩余（CS+PS）。"
+        }
+      },
+      "case": {
+        "event": "用大数据测度网约车的消费者剩余（Cohen 等，NBER 22627）",
+        "facts": "2016 年 9 月发布的 NBER 工作论文 22627 中，Cohen、Hahn、Hall、Levitt 与 Metcalfe 利用 Uber 溢价定价算法与近 5000 万条个体层面观测，用断点回归设计估计需求曲线各点的弹性，进而计算消费者剩余：2015 年 UberX 服务在美国四个最大的城市市场创造约 29 亿美元消费者剩余；消费者每支出 1 美元，约产生 1.6 美元的消费者剩余；按比例外推，2015 年全美 UberX 的消费者剩余约 68 亿美元。",
+        "source_ref": "[Cohen, Hahn, Hall, Levitt & Metcalfe, 2016, 《NBER Working Paper 22627》, Using Big Data to Estimate Consumer Surplus: The Case of Uber](https://www.nber.org/papers/w22627)",
+        "explain": "这份研究把教材里『需求曲线以下、价格以上的面积』从图形变成了可估计的对象：借助溢价定价在需求曲线上制造大量局部价格变动，研究者识别出整条需求曲线，再积分得到 CS。其结论也印证了剩余概念的经济含义——一个免费安装、随叫随到的服务，消费者获得的福利（剩余）可以达到其支出额的 1.6 倍，远大于账面消费额所显示的水平。"
+      },
+      "l2": {
+        "derivation": "① 离散定义：CS = Σ（第 i 个消费者的支付意愿 - 市场价格），即需求曲线下方面积；PS = Σ（市场价格 - 第 i 个卖者的底线），即供给曲线上方面积。② 线性公式：D：P = a - bQ 时，CS = ½×(a - P*)×Q*；S：P = c + dQ 时，PS = ½×(P* - c)×Q*；总剩余 = ½×(a - c)×Q*。③ 数值例：D：P = 20 - 0.5Q，市场价 P = 12 → 成交 Q = 16，CS = ½×(20-12)×16 = 64。④ 效率结论：在 Q* 处最后一单位的支付意愿恰好等于边际成本，任何 Q ≠ Q* 的成交量都会使总剩余变小——超出部分 WTP<MC，是负剩余交易；不足部分则漏掉了 WTP>MC 的互利交易（无谓损失）。⑤ 应用：税收、管制、垄断的效率损失都可用 CS+PS 的减少（扣除转移）来度量。",
+        "exam_tips": "考研必考两类题：①给线性供求求 CS、PS、总剩余（三角形面积公式，先求均衡再套公式）；②求税收或价格控制的净损失——记住『转移不是损失』：从 CS 转为税收的部分只是换口袋，只有交易量减少引起的楔形面积才是无谓损失。注意生产者剩余≠利润：PS 只扣可变成本，还覆盖固定成本部分。",
+        "pitfalls": [
+          "❌误区：消费者剩余是消费者『省下来的真金白银』，企业损失了同样的金额 → ✅纠正：CS 是主观福利度量（愿付与实付之差），并不对应任何一方账面上的等额损失；价格由市场决定，不是谁『让利』给谁。",
+          "❌误区：生产者剩余就是利润 → ✅纠正：PS = 收入 - 变动成本；利润 = 收入 - 变动成本 - 固定成本。短期内 PS ≥ 利润，两者相差固定成本。"
+        ]
+      },
+      "l3": {
+        "math": "CS = ∫₀^Q* D(q)dq - P*Q*；PS = P*Q* - ∫₀^Q* S(q)dq（完全竞争短期供给即 MC 曲线，故 PS = P*Q* - ∫₀^Q* MC(q)dq = 收入 - 可变成本）；总剩余 W = ∫₀^Q [D(q) - S(q)]dq，在 D(Q*) = S(Q*) 处取最大值（一阶条件 dW/dQ = D(Q) - S(Q) = 0，二阶条件 D′-S′<0）。价格上限 Pc 下的效率分析见 m02-05 的 L3；对整个经济体，把『新商品与免费品』的 CS 计入国民福利度量即 GDP-B 框架（见前沿）。"
+      },
+      "animation": {
+        "type": "sd-shift",
+        "params": {
+          "demand": { "a": 120, "b": -3 },
+          "supply": { "a": 30, "b": 2 },
+          "draggable": "demand",
+          "xLabel": "Q",
+          "yLabel": "P"
+        },
+        "description": "需求 P = 120 - 3Q、供给 P = 30 + 2Q（均衡 P* = 60，Q* = 18）；拖动需求曲线，观察需求曲线以下与价格线以上的消费者剩余区域如何变化。",
+        "interactions": ["上下拖动需求曲线改变支付意愿水平", "观察均衡价格与数量变化时剩余三角形的伸缩"]
+      },
+      "quiz": [
+        {
+          "level": "L1",
+          "stem": "消费者剩余指的是：",
+          "options": [
+            "消费者用优惠券省下的钱",
+            "消费者愿意支付的最高价格与实际支付价格之差（全体买家加总）",
+            "商家打折让利给顾客的部分",
+            "政府发放给消费者的补贴"
+          ],
+          "answer": 1,
+          "explain": "CS 是主观福利概念：每个买家『最多愿意付』与『实际付了』之间的差额，加总后等于需求曲线以下、价格线以上的面积。它不要求真的有谁在让利。",
+          "hint": "问自己：这杯奶茶你本愿意付 30 元，只付了 18 元，那 12 元叫什么？"
+        },
+        {
+          "level": "L2",
+          "stem": "（案例背景）Cohen 等估计 2015 年 UberX 在美国四大城市创造约 29 亿美元消费者剩余，约每 1 美元支出对应 1.6 美元剩余。设某城市打车需求为 P = 20 - 0.5Q，现价为 P = 12 美元，该市场的消费者剩余为：",
+          "options": ["32", "48", "64", "80"],
+          "answer": 2,
+          "explain": "P = 12 时 Q = (20-12)/0.5 = 16；CS = ½×(20-12)×16 = 64。这正是论文思路的最小版本：知道整条需求曲线与价格，剩余就是那个三角形面积。",
+          "hint": "先由需求函数求出该价格下的成交量，再套三角形面积公式。"
+        },
+        {
+          "level": "L3",
+          "stem": "D：P = 60 - 2Q，S：P = 12 + Q。均衡时的生产者剩余为：",
+          "options": ["256", "128", "384", "192"],
+          "answer": 0,
+          "explain": "均衡：60 - 2Q = 12 + Q → Q* = 16，P* = 44。PS = ½×(P* - c)×Q* = ½×(44-12)×16 = 256。（CS = ½×(60-44)×16 = 128，总剩余 = 384。）",
+          "hint": "先解均衡，PS 三角形的底是 P* 与供给截距 c 之差，高是 Q*。"
+        }
+      ],
+      "frontier": [
+        {
+          "finding": "研究问题：GDP 只统计有市场价格的东西，免费数字品带来的巨大消费者剩余如何计入国民福利？Brynjolfsson、Collis、Diewert、Eggers 与 Fox 提出并正式化 GDP-B 框架：用激励相容的大规模在线选择实验为 Facebook、智能手机摄像头等新商品与免费品估值，把『福利贡献项』显式加入增长核算。对教材的补充：CS 不只是教学图形，而是测量数字经济福利的核心工具——消费者剩余可以大到 GDP 完全忽略的程度，教材『总剩余度量社会福利』的结论在新经济部门被进一步放大。",
+          "controversy": "",
+          "citation": "[Brynjolfsson, Collis, Diewert, Eggers & Fox, 2025, 《American Economic Journal: Macroeconomics》, GDP-B: Accounting for the Value of New and Free Goods](https://www.aeaweb.org/articles?id=10.1257/mac.20210319)"
+        }
+      ],
+      "links": {
+        "prev": [
+          "m02-05|价格管制的福利代价要用剩余来度量",
+          "m02-03|竞争均衡处总剩余最大"
+        ],
+        "next": [
+          "m03-01|弹性决定剩余在涨价或征税时如何分割",
+          "m07-02|垄断定价的无谓损失是剩余分析的直接延伸"
+        ]
+      },
+      "references": [
+        "[Cohen, Hahn, Hall, Levitt & Metcalfe, 2016, 《NBER Working Paper 22627》, Using Big Data to Estimate Consumer Surplus: The Case of Uber](https://www.nber.org/papers/w22627)",
+        "[Brynjolfsson, Collis, Diewert, Eggers & Fox, 2025, 《American Economic Journal: Macroeconomics》, GDP-B: Accounting for the Value of New and Free Goods](https://www.aeaweb.org/articles?id=10.1257/mac.20210319)"
+      ]
+    }
+  ]
+}
