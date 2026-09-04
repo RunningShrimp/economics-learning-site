@@ -52,3 +52,10 @@
 | 2026-09-04 | m02 圣路易斯联储引用页（Shapiro 2022）主控抽检时抓取超时，未能由主控直接复核 | Phase 4 QA 已成功打开核验，通过，闭环 |（历史）
 | 2026-09-04 | QA 发现 h09-01 前沿将 FRBSF 简报作者误写为 4 人（实为 Bok 与 Petrosky-Nadeau 2 人） | 主控已修正署名，validate 通过 |
 | 2026-09-04 | QA 发现 m07-04 案例中「加价时不给折扣」在所引来源可见文本中无支撑 | 主控已删除该表述（宁缺毋滥），validate 通过 |
+
+
+## 交付快照（2026-09-04）
+- 线上地址：https://runningshrimp.github.io/economics-learning-site/
+- 远程仓库：https://github.com/RunningShrimp/economics-learning-site（public，main 分支，Pages: main /(root)，含 .nojekyll）
+- 规模：20 章 / 106 知识点 / 318 例题 / 106 真实案例 / 149 条前沿研究引用 / 269 条 references
+- 验收：a–f 全部满足，证据见 qa-report.md 与最终交付报告
