@@ -390,3 +390,193 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   .pager, .btn-speak, .anim-controls { display: none !important; }
   .module { box-shadow: none; break-inside: avoid; }
 }
+
+/* ============================================================
+   门户页专属样式（index.html / about.html）
+   类名前缀：portal- / guide- / mm- / about-，不影响知识点页
+   ============================================================ */
+
+/* ---------- 门户头 + 总进度 ---------- */
+.portal-badges { display: flex; gap: 8px; flex-wrap: wrap; }
+.portal-head h1 { margin: 10px 0 4px; font-size: 30px; line-height: 1.3; }
+.portal-sub { margin: 0 0 14px; color: var(--muted); font-size: 15px; }
+.portal-progress {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: 16px 20px;
+}
+.portal-links { margin-top: 12px; }
+.portal-about-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  min-height: 40px; padding: 8px 18px;
+  font-size: 14.5px; font-weight: 600;
+  color: #fff; background: linear-gradient(90deg, var(--accent), #0f766e);
+  border-radius: 999px;
+}
+.portal-about-link:hover { filter: brightness(1.06); text-decoration: none; }
+
+/* ---------- 首次访问引导 ---------- */
+.guide-box {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  background: var(--primary-soft); border: 1px solid #c7d2fe;
+  border-radius: var(--radius); padding: 14px 18px;
+}
+.guide-box p { flex: 1 1 260px; margin: 0; font-size: 14.5px; line-height: 1.8; color: #3730a3; }
+.guide-box .btn-next { flex: 0 0 auto; }
+
+/* ---------- 思维导图树（板块 → 章 → 知识点） ---------- */
+.mm-tools { display: flex; gap: 8px; margin-bottom: 10px; }
+.mm-tool-btn {
+  font-family: inherit; font-size: 12.5px; color: var(--primary);
+  background: var(--primary-soft); border: 1px solid #c7d2fe;
+  border-radius: 999px; padding: 5px 12px; cursor: pointer;
+}
+.mm-tool-btn:hover { filter: brightness(.98); }
+.mm-tree, .mm-tree ul { list-style: none; margin: 0; padding: 0; }
+.mm-track { margin-top: 14px; }
+.mm-track:first-child { margin-top: 0; }
+.mm-track-head {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  padding: 10px 14px; background: #fbfcfe;
+  border: 1px solid var(--border); border-radius: 10px;
+}
+.mm-track-name { font-weight: 700; font-size: 15px; }
+.mm-track-count { margin-left: auto; font-size: 12.5px; color: var(--muted); }
+.mm-chs { margin: 4px 0 0 14px; padding-left: 12px; border-left: 2px solid var(--border); }
+.mm-ch { margin: 2px 0; }
+.mm-ch-btn {
+  width: 100%; display: flex; align-items: center; gap: 8px;
+  font-family: inherit; font-size: 14.5px; color: var(--ink);
+  background: none; border: 0; border-radius: 8px;
+  padding: 8px 10px; cursor: pointer; text-align: left;
+}
+.mm-ch-btn:hover { background: var(--primary-soft); }
+.mm-arrow { flex: 0 0 auto; width: 12px; font-size: 12px; color: var(--muted); transition: transform .15s; }
+.mm-ch.open > .mm-ch-btn .mm-arrow { transform: rotate(90deg); }
+.mm-ch-name { flex: 1 1 auto; min-width: 0; word-break: break-word; }
+.mm-ch-no { color: var(--muted); font-size: 12.5px; margin-right: 4px; }
+.mm-ch-count {
+  flex: 0 0 auto; margin-left: auto; font-size: 12px; color: var(--muted);
+  background: #f1f5f9; border-radius: 999px; padding: 3px 10px;
+}
+.mm-pts {
+  display: none; margin: 2px 0 6px 18px; padding-left: 12px;
+  border-left: 2px dashed var(--border);
+}
+.mm-ch.open > .mm-pts { display: block; }
+.mm-pt {
+  display: block; padding: 5px 8px; border-radius: 7px;
+  font-size: 14px; color: #334155; word-break: break-word;
+}
+.mm-pt:hover { background: var(--primary-soft); color: var(--primary); text-decoration: none; }
+.mm-mk { display: inline-block; width: 2.6em; font-size: 13px; line-height: 1; }
+.mk-done { color: var(--good); font-weight: 700; }
+.mk-warn { color: var(--warn); font-weight: 700; margin-left: 2px; }
+
+/* ---------- 学习地图（按章分组网格 + 状态徽标） ---------- */
+.mm-map-track-head {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  margin: 22px 0 4px; padding-bottom: 8px; border-bottom: 2px solid var(--border);
+}
+.mm-map-ch { margin-top: 16px; }
+.mm-map-ch h3 {
+  margin: 0 0 9px; font-size: 15px; color: #334155;
+  display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap;
+}
+.mm-map-count { font-size: 12.5px; font-weight: 400; color: var(--muted); }
+.mm-grid {
+  display: grid; gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+}
+.mm-card {
+  display: flex; flex-direction: column; gap: 8px;
+  justify-content: space-between; min-height: 86px;
+  background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+  padding: 11px 12px; color: var(--ink);
+  transition: border-color .12s, box-shadow .12s, transform .12s;
+}
+.mm-card:hover {
+  border-color: var(--primary); box-shadow: var(--shadow);
+  transform: translateY(-1px); text-decoration: none;
+}
+.mm-card-title { font-size: 13.5px; font-weight: 600; line-height: 1.55; word-break: break-word; }
+.mm-badge {
+  align-self: flex-start; font-size: 11.5px; font-weight: 700;
+  line-height: 1; padding: 4px 9px; border-radius: 999px; white-space: nowrap;
+}
+.b-new { color: #64748b; background: #f1f5f9; }
+.b-learning { color: var(--primary); background: var(--primary-soft); }
+.b-done { color: #166534; background: var(--good-bg); }
+.b-donewrong { color: #166534; background: var(--good-bg); border: 1px dashed var(--l1-border); }
+.b-review { color: #b45309; background: var(--warn-bg); border: 1px solid #fde68a; }
+.mm-card.st-review { border-color: #fcd34d; background: #fffbeb; }
+.mm-card-tip { font-size: 11.5px; color: #b45309; }
+
+/* ---------- 错题本 ---------- */
+.mm-err { list-style: none; margin: 0; padding: 0; }
+.mm-err-item {
+  margin-bottom: 10px; padding: 11px 14px;
+  background: #fbfcfe; border: 1px solid var(--border); border-radius: 10px;
+}
+.mm-err-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.mm-err-title { font-weight: 700; font-size: 15px; }
+.mm-btn-redo {
+  margin-left: auto; font-size: 13px; font-weight: 600; white-space: nowrap;
+  color: var(--primary); background: var(--primary-soft);
+  padding: 6px 13px; border-radius: 999px;
+}
+.mm-btn-redo:hover { text-decoration: none; filter: brightness(.97); }
+.mm-err-meta { margin-top: 7px; font-size: 13px; color: var(--muted); }
+.mm-err-empty {
+  margin: 0 0 12px; padding: 18px; text-align: center;
+  color: var(--muted); font-size: 14.5px;
+  background: #f8fafc; border: 1px dashed var(--border); border-radius: 10px;
+}
+.mm-err-foot { display: flex; justify-content: flex-end; }
+.mm-btn-clear {
+  font-family: inherit; font-size: 13.5px; cursor: pointer;
+  color: var(--bad); background: #fff;
+  border: 1px solid #fecaca; border-radius: 999px; padding: 8px 16px;
+}
+.mm-btn-clear:hover { background: var(--bad-bg); }
+
+/* ---------- about 页 ---------- */
+.about-steps { list-style: none; counter-reset: step; margin: 0; padding: 0; }
+.about-steps li {
+  position: relative; padding: 12px 0 12px 42px;
+  border-top: 1px dashed var(--border); font-size: 15px; line-height: 1.85;
+}
+.about-steps li:first-child { border-top: 0; padding-top: 2px; }
+.about-steps li::before {
+  counter-increment: step; content: counter(step);
+  position: absolute; left: 0; top: 16px;
+  width: 27px; height: 27px; border-radius: 999px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--primary-soft); color: var(--primary);
+  font-weight: 700; font-size: 14px;
+}
+.about-steps li:first-child::before { top: 6px; }
+.about-list { list-style: none; margin: 10px 0 0; padding: 0; }
+.about-list li {
+  margin: 8px 0; padding: 10px 14px; border-radius: 10px;
+  background: #fbfcfe; border: 1px solid var(--border);
+  font-size: 14.5px; line-height: 1.8;
+}
+.about-kw { font-weight: 700; color: var(--accent); margin-right: 6px; }
+.about-kw.pri { color: var(--primary); }
+.book-list { list-style: none; margin: 8px 0 0; padding: 0; }
+.book-list li {
+  position: relative; margin: 6px 0; padding-left: 22px;
+  font-size: 14.5px; color: #334155;
+}
+.book-list li::before { content: "📖"; position: absolute; left: 0; font-size: 13px; }
+
+/* ---------- 门户页移动端 ---------- */
+@media (max-width: 719px) {
+  .portal-head h1 { font-size: 24px; }
+  .portal-progress { padding: 13px 15px; }
+  .mm-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; }
+  .mm-mk { width: 2.3em; }
+  .mm-btn-redo { margin-left: 0; }
+  .about-steps li { padding-left: 38px; font-size: 14.5px; }
+}
