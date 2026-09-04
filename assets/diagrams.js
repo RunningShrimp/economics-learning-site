@@ -767,7 +767,8 @@
       nash.forEach(function (rc) { if (Array.isArray(rc)) isNash[rc[0] + ',' + rc[1]] = true; });
 
       var colW = 170, rowH = 88, cornerW = 96, headH = 66;
-      var W = Math.max(300, Math.min(w.svgWrap.clientWidth || 620, cornerW + colW * nC + 32));
+      /* viewBox 恒取内容全宽，窄屏由 CSS max-width:100% 等比缩放，避免固定布局被裁剪 */
+      var W = cornerW + colW * nC + 32;
       var H = headH + rowH * nR + 20;
       var svg = s('svg', { width: W, height: H, viewBox: '0 0 ' + W + ' ' + H, role: 'img', class: 'd-payoff' });
       w.svgWrap.appendChild(svg);
