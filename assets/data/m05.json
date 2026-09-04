@@ -1,0 +1,584 @@
+{
+  "chapter": "m05",
+  "title": "生产与成本",
+  "points": [
+    {
+      "id": "m05-01",
+      "title": "生产函数与边际产量递减",
+      "l1": {
+        "definition": "生产函数（production function）表示在给定技术下，各种投入组合最多能生产多少产量；边际产量（marginal product, MP）指其他投入不变时，多投入一单位某种要素带来的额外产量。短期内厂房、设备等资本固定，连续增加劳动，劳动的边际产量最终会越来越小——这就是边际产量递减规律（law of diminishing marginal product）。",
+        "analogy": "一家小奶茶店只有一个操作台：第 1 个店员能做出很多杯，第 2 个店员帮忙备料仍然高效，可到了第 5、6 个店员，大家挤在一起互相等待，每多来一个人新增的杯数越来越少。又如食堂打饭窗口数量固定，帮手加到一定程度后，每多一个帮手带来的『快』就越来越有限。",
+        "image": {
+          "type": "bars",
+          "params": {
+            "items": [
+              {"label": "第1人", "value": 20},
+              {"label": "第2人", "value": 15},
+              {"label": "第3人", "value": 10},
+              {"label": "第4人", "value": 5},
+              {"label": "第5人", "value": 1}
+            ],
+            "xLabel": "劳动人数（资本固定）",
+            "yLabel": "边际产量 MP"
+          },
+          "caption": "资本固定时，每多雇一名工人带来的新增产量（边际产量）越来越小。"
+        }
+      },
+      "case": {
+        "event": "富士康郑州工厂为 iPhone 15 量产大举招工（2023 年）",
+        "facts": "2023 年 5 月，富士康郑州工厂——全球最大的 iPhone 生产设施，雇用超过 20 万名工人、组装全球约 80% 的 iPhone 供应量——为 iPhone 15 量产储备人力，一个月内三次上调新员工奖金：工作满 90 天的奖金最高升至 3,000 元（约 424 美元），时薪最高 21 元，在职员工每成功推荐一名新工人另得 500 元奖励。此前一年的疫情扰动曾导致大量工人离厂。",
+        "source_ref": "[9to5Mac, 2023, 《9to5Mac》, iPhone worker bonuses raised three times in one month, as Foxconn preps for iPhone 15](https://9to5mac.com/2023/05/29/iphone-worker-bonuses-2/)",
+        "explain": "厂房与产线（资本）在短期内无法扩张，iPhone 15 上市前想提高产量，只能增雇劳动——这正是『短期：至少一种投入固定』的定义。但每条产线的最优人数有限：人手不足时机器闲置、边际产量高；人超过一定数量后工人互相等待、协调成本上升，边际产量递减，总产量的增长越来越慢。于是工厂必须用现金奖金『按边际加价』，才能把工人吸引到产线上并留满 90 天旺季。"
+      },
+      "l2": {
+        "derivation": "① 数值演示（资本固定 K=10）：劳动 L = 0,1,2,3,4,5 时总产量 TP = 0,20,45,70,85,86。\n② 边际产量 MPL = ΔTP/ΔL = 20,25,25,15,1；平均产量 APL = TP/L = 20,22.5,23.3,21.25,17.2。\n③ 规律：MPL 先升后降（递减从第 4 人开始）；MPL > APL 时 APL 上升，MPL < APL 时 APL 下降，MPL = APL 处 APL 最大（本例约在 L=3 附近）；MPL = 0（L=6 起）时 TP 达到最大，此后 TP 下降。\n④ 曲线关系：TP 以递减的速度上升，其斜率就是 MPL；MPL 的最高点对应 TP 曲线的拐点。\n⑤ 短期与长期：短期至少一种投入固定（本例的 10 台设备），长期所有投入都可变——边际产量递减是短期规律，所有要素同比例增加则是长期规模报酬问题。",
+        "exam_tips": "高频考点：TP、APL、MPL 三条曲线的对应关系（MPL 交 APL 于 APL 最高点；MPL 最高点对应 TP 拐点）；边际产量递减的原因（固定资本被更多劳动摊薄、协作与拥挤成本上升）；短期与长期的划分标准；技术进步或资本增加会使整条 TP 曲线上移，但不改变『短期递减』的性质。",
+        "pitfalls": [
+          "❌误区：边际产量递减意味着总产量在下降 → ✅纠正：只要 MP > 0，总产量仍在增加（只是增得越来越慢）；MP < 0 时总产量才下降。",
+          "❌误区：边际产量递减适用于所有投入同比例增加的情形 → ✅纠正：它以『其他投入固定、技术不变』为前提；所有要素同比例增加属于长期的规模报酬问题，两者不可混为一谈。"
+        ]
+      },
+      "l3": {
+        "math": "短期生产函数 Q = f(L, K̄)，边际产量 MP_L = ∂Q/∂L > 0 且 ∂²Q/∂L² < 0（f 对 L 为严格凹）即边际产量递减。长期成本最小化：min wL + rK s.t. F(L,K) = Q，拉格朗日条件 MP_L/w = MP_K/r（MRTS = 要素价格比），与消费者均衡 MU_x/P_x = MU_y/P_y 对偶；λ = ∂C*/∂Q 即边际成本。规模弹性 E = dlnQ/dln(投入)，E > 1、= 1、< 1 分别对应规模报酬递增、不变、递减。柯布-道格拉斯 Q = A·L^α·K^β：α < 1 时劳动边际产量递减；α + β 与 1 的比较决定规模报酬。"
+      },
+      "animation": {
+        "type": "slider-graph",
+        "params": {
+          "mode": "line",
+          "expr": "s1*x/(x+4)",
+          "xRange": [0, 40],
+          "yLabel": "总产量 TP",
+          "xLabel": "劳动 L",
+          "sliders": [{"key": "s1", "min": 20, "max": 120, "step": 5, "init": 60, "label": "资本规模（产能上限）"}]
+        },
+        "description": "总产量曲线 TP = K·L/(L+4)：拖动资本规模 K，曲线整体上移，但曲线始终越来越平——斜率（边际产量）随劳动增加而递减。",
+        "interactions": ["拖动『资本规模』滑杆改变产能，观察曲线上移但增速仍递减", "沿横轴观察曲线斜率如何随 L 增大而变小（边际产量递减）"]
+      },
+      "quiz": [
+        {
+          "level": "L1",
+          "stem": "短期内厂房、设备不变，连续增加工人数量，劳动的边际产量将会：",
+          "options": ["一直上升", "保持不变", "可能先上升，但最终会递减", "立即变为负数"],
+          "answer": 2,
+          "explain": "边际产量递减规律说的是『最终递减』：初期可能因分工协作而先上升，但当固定资本被摊薄、人员拥挤后，每多一人新增的产量必然越来越小。",
+          "hint": "抓住『资本固定』这个前提：人越来越多、机器还是那么多，新增人手的贡献怎么会一直增加呢？"
+        },
+        {
+          "level": "L2",
+          "stem": "（案例背景）2023 年 5 月，富士康郑州工厂（全球最大 iPhone 工厂，组装全球约 80% 的 iPhone）为 iPhone 15 量产一个月内三次上调招工奖金至 3,000 元、时薪最高 21 元。从短期生产函数看，最合理的解释是：",
+          "options": ["奖金上调说明劳动的边际产量一直在上升", "厂房与产线短期固定，加快出货只能增雇劳动；要把工人吸引到产线并留满 90 天旺季，只能『按边际加价』付报酬", "工人越多，总产量反而越低", "这是苹果公司要求工厂压缩工资成本的结果"],
+          "answer": 1,
+          "explain": "短期资本固定，产量调节只能靠增雇劳动——这正是富士康大规模招工的原因；而产线人数超过最优区间后边际产量递减、招工难度上升，工厂只能用现金奖金这种『边际上的加价』把工人吸引并留在产线上。",
+          "hint": "想一想：为什么不能像长期那样直接多建几条产线？短期里企业能调整的只有劳动。"
+        },
+        {
+          "level": "L3",
+          "stem": "某工厂的短期生产函数为 Q = 30L + 6L² − L³（资本固定）。当 L = 2 时，劳动的边际产量 MPL 等于：",
+          "options": ["42", "30", "46", "24"],
+          "answer": 0,
+          "explain": "MPL = dQ/dL = 30 + 12L − 3L²，代入 L = 2 得 30 + 24 − 12 = 42。边际产量是总产量对劳动的导数，而非总产量本身（TP(2) = 100）。",
+          "hint": "先对生产函数求导得到 MPL = 30 + 12L − 3L²，再代入 L = 2；注意别把总产量 Q(2) = 100 当成答案。"
+        }
+      ],
+      "frontier": [
+        {
+          "finding": "研究问题：给定算力预算，AI 大模型的『模型规模』与『训练数据』该如何配比？Hoffmann 等人训练 400 多个语言模型（参数从 7,000 万到超 160 亿）后发现：当时的大模型普遍『训练不足』；计算最优的做法是模型规模与训练数据量同比例放大——模型规模每翻倍，训练 token 数也应翻倍；按此训练的 Chinchilla（70B 参数、数据量 4 倍）全面超过更大的 Gopher（280B）与 GPT-3（175B）。对教材的补充：边际产量递减规律在 AI 生产中同样成立——只堆模型规模而数据不变，新增算力的边际收益递减；最优要素组合要求各投入平衡增长。",
+          "controversy": "",
+          "citation": "[Jordan Hoffmann 等, 2022, 《arXiv》, Training Compute-Optimal Large Language Models](https://arxiv.org/abs/2203.15556)"
+        },
+        {
+          "finding": "研究问题：互联网文本数据接近用尽后，重复使用训练数据是否仍然有效？Muennighoff 等人在最多 9,000 亿 token、90 亿参数规模内做了 400 次训练实验，发现：数据受限时，重复数据不超过 4 个 epoch（轮次）几乎不增加损失，但重复次数更多之后，追加算力的边际价值最终衰减为零。对教材的补充：连『数据』这种可复用的投入也逃不过边际产量递减——重复使用带来的边际产量递减得非常快。",
+          "controversy": "",
+          "citation": "[Niklas Muennighoff 等, 2023, 《arXiv》, Scaling Data-Constrained Language Models](https://arxiv.org/abs/2305.16264)"
+        }
+      ],
+      "links": {
+        "prev": ["m04-06|消费者理论以『买什么』收尾，本章转向企业端：生产如何把投入变成产出"],
+        "next": ["m05-02|有了产量随投入变化的规律，就能算出每一单位产量的成本"]
+      },
+      "references": [
+        "[9to5Mac, 2023, 《9to5Mac》, iPhone worker bonuses raised three times in one month, as Foxconn preps for iPhone 15](https://9to5mac.com/2023/05/29/iphone-worker-bonuses-2/)",
+        "[Jordan Hoffmann 等, 2022, 《arXiv》, Training Compute-Optimal Large Language Models](https://arxiv.org/abs/2203.15556)",
+        "[Niklas Muennighoff 等, 2023, 《arXiv》, Scaling Data-Constrained Language Models](https://arxiv.org/abs/2305.16264)"
+      ]
+    },
+    {
+      "id": "m05-02",
+      "title": "短期成本曲线族",
+      "l1": {
+        "definition": "短期成本是短期内（至少一种投入固定）生产中发生的成本：总成本 TC = 固定成本 FC + 可变成本 VC。固定成本（如厂房租金、设备投入）不随产量变化，可变成本（如原材料、加班工资）随产量增减。把总成本和它的两个部分分别除以产量，就得到一族平均成本：AFC、AVC、ATC，再加上边际成本 MC，构成『短期成本曲线族』。",
+        "analogy": "开一家奶茶店：房租和设备折旧，不管今天卖 1 杯还是 1,000 杯都要照付——这是固定成本；奶、茶、杯子随销量多买——这是可变成本。卖得越多，摊到每杯上的房租就越薄：『分母越大，每杯摊的固定开销越便宜』。",
+        "image": {
+          "type": "bars",
+          "params": {
+            "items": [
+              {"label": "产量1", "value": 100},
+              {"label": "产量2", "value": 50},
+              {"label": "产量4", "value": 25},
+              {"label": "产量5", "value": 20}
+            ],
+            "xLabel": "产量 Q",
+            "yLabel": "平均固定成本 AFC（元）"
+          },
+          "caption": "固定成本 100 元不变：产量越大，每单位分摊的平均固定成本 AFC 越低（100、50、25、20）。"
+        }
+      },
+      "case": {
+        "event": "台积电亚利桑那三座晶圆厂与美国《芯片法案》补贴（2024 年）",
+        "facts": "2024 年 11 月 15 日，美国商务部宣布向台积电子公司 TSMC Arizona 提供最高 66 亿美元的直接资助；该资助支持台积电在凤凰城建设三座领先制程晶圆厂、计划投资超过 650 亿美元（平均每座超过 200 亿美元），预计创造超过 2 万个就业岗位。相关初步条款于 2024 年 4 月 8 日公布，首座工厂当时预计于 2025 年初全面投产。",
+        "source_ref": "[U.S. Department of Commerce, 2024, 《新闻稿》, Biden-Harris Administration Announces CHIPS Incentives Award with TSMC Arizona](https://www.commerce.gov/news/press-releases/2024/11/biden-harris-administration-announces-chips-incentives-award-tsmc)",
+        "explain": "晶圆厂是极端的『高固定成本』行业：超过 650 亿美元的厂房与设备短期内无法调整，无论最终产出多少颗芯片都要先付——这是典型的固定成本；硅片、电力、人工才是可变成本。产量越大，每颗芯片分摊的厂房成本越低，平均总成本 ATC 在扩张初期持续下降——这正是固定成本摊薄效应，也解释了为什么各国政府愿意用巨额补贴去争夺建厂选址。"
+      },
+      "l2": {
+        "derivation": "① 成本表（FC = 100）：Q = 1→5 时 TVC = 30,55,90,140,210；TC = FC+TVC = 130,155,190,240,310；AFC = 100,50,33.3,25,20；AVC = 30,27.5,30,35,42；ATC = 130,77.5,63.3,60,62；MC = 30,25,35,50,70。\n② 七条曲线特征：TFC 为水平线；TC 与 TVC 形状相同、垂直距离恒为 TFC；AFC 一路递减（矩形双曲线）；AVC 与 ATC 均为 U 形；MC 先降后升，其最低点对应 TVC（和 TC）曲线的拐点。\n③ 关系：ATC = AVC + AFC，两者垂直距离等于 AFC，随产量扩大而缩小但永不相交；MC 自下而上依次穿过 AVC 与 ATC 的最低点（ATC 最低点在更右边）。\n④ 根源：MC 的形状由边际产量决定——边际产量先升后降 ⇔ MC 先降后升；U 形平均成本的根源是固定成本摊薄（拉低）与边际产量递减（抬高）的角力。",
+        "exam_tips": "高频考点：由总成本表计算 AFC/AVC/ATC/MC 并画图；TC 与 TVC 平行、垂直距离为 TFC；ATC 与 AVC 的距离随 Q 增大缩小但不相交；MC 最低点对应 TVC 与 TC 的拐点；曲线 U 形的根源是边际产量递减（短期）而非技术倒退。",
+        "pitfalls": [
+          "❌误区：产量足够大时 ATC 与 AVC 会相交 → ✅纠正：两者之差恰为 AFC > 0，只能无限接近、永不相交。",
+          "❌误区：固定成本越高，边际成本越大 → ✅纠正：MC = ΔTC/ΔQ = ΔVC/ΔQ，固定成本不随产量变化，不影响 MC；它只影响 AFC 与 ATC 的位置。"
+        ]
+      },
+      "l3": {
+        "math": "C(Q) = w·L(Q) + r·K̄ ≡ FC + VC(Q)。MC = dTC/dQ = dVC/dQ = w·dL/dQ = w/MP_L：边际产量递减（MP_L 下降）直接推出 MC 递增；AVC = VC/Q = w/AP_L，平均产量最大处 AVC 最小。AFC = FC/Q 双曲递减；ATC = AFC + AVC 的 U 形由摊薄效应与抬升效应共同决定。示例：TC = FC + cQ² ⇒ MC = 2cQ（线性上升），ATC = FC/Q + cQ 在 Q* = √(FC/c) 处最小。"
+      },
+      "animation": {
+        "type": "slider-graph",
+        "params": {
+          "mode": "line",
+          "expr": "s1/x + 0.5*x",
+          "xRange": [1, 60],
+          "yLabel": "平均总成本 ATC",
+          "xLabel": "产量 Q",
+          "sliders": [{"key": "s1", "min": 20, "max": 200, "step": 10, "init": 100, "label": "固定成本 FC"}]
+        },
+        "description": "ATC = FC/Q + 0.5Q 的 U 形曲线：固定成本越大，低产量区间的 ATC 越高、U 形越深，最低点也越靠右（Q* = √(FC/0.5) = √(2·FC)）。",
+        "interactions": ["拖动『固定成本』滑杆，观察曲线左端抬高、最低点右移", "在低产量区间观察固定成本摊薄带来的急剧下降"]
+      },
+      "quiz": [
+        {
+          "level": "L1",
+          "stem": "下列属于固定成本（FC）的是：",
+          "options": ["每多生产一单位产品新增的成本", "平均到每单位产品上的成本", "短期内不随产量变化的成本", "随产量同比例变化的成本"],
+          "answer": 2,
+          "explain": "固定成本是短期内不随产量变化而变化的开支，如厂房租金、设备投入；A 项是边际成本，B 项是平均成本，D 项更像可变成本。",
+          "hint": "问自己：今天停产一天，这笔钱还要不要付？要付的就是固定成本。"
+        },
+        {
+          "level": "L2",
+          "stem": "（案例背景）台积电亚利桑那项目投资超 650 亿美元建设三座晶圆厂，美国商务部提供最高 66 亿美元资助。关于该厂成本结构，下列说法正确的是：",
+          "options": ["650 亿美元属于可变成本，随芯片产量增减而变化", "650 亿美元属于短期固定成本；产量越大，每颗芯片分摊的厂房设备成本越低，ATC 随产量上升而下降", "巨额固定成本使边际成本趋于无穷大", "固定成本越高，边际成本曲线越陡峭"],
+          "answer": 1,
+          "explain": "厂房与设备一旦建成，短期内不随产量变化，是典型固定成本；它决定了 AFC 曲线的位置并压低低产量区间的 ATC——产量扩张能持续摊薄它。固定成本不影响 MC（MC = ΔVC/ΔQ），故 A、C、D 均错。",
+          "hint": "固定成本影响的是『平均』曲线的位置，而不是『边际』曲线的形状。"
+        },
+        {
+          "level": "L3",
+          "stem": "某企业短期总成本函数为 TC = 100 + 12Q − 2Q² + Q³（Q > 0）。平均可变成本 AVC 取得最小值时的产量与最小 AVC 为：",
+          "options": ["Q=1，AVC=11", "Q=2，AVC=12", "Q=3，AVC=15", "Q=4，AVC=20"],
+          "answer": 0,
+          "explain": "AVC = 12 − 2Q + Q²，令 dAVC/dQ = −2 + 2Q = 0 得 Q = 1，AVC(1) = 11。此时 MC = 12 − 4Q + 3Q² = 11 = AVC，验证了『MC 穿过 AVC 最低点』的结论。",
+          "hint": "先写出 AVC = TVC/Q = 12 − 2Q + Q²，令导数为零；再代回验证 MC = AVC。"
+        }
+      ],
+      "frontier": [
+        {
+          "finding": "研究问题：前沿 AI 模型的训练成本有多大？斯坦福 HAI《AI Index 2024》报告要点估计：OpenAI 的 GPT-4 训练所用算力价值约 7,800 万美元，Google 的 Gemini Ultra 算力成本约 1.91 亿美元（据 AI Index 估计）。对教材的补充：现代高技术行业的『固定成本』规模远超传统工厂；固定成本摊薄（用户越多、单位成本越低）成为这类行业成本结构的核心特征，也是补贴与地缘竞争的焦点。",
+          "controversy": "",
+          "citation": "[Stanford HAI, 2024, 《AI Index Report 2024》, The 2024 AI Index Report](https://hai.stanford.edu/ai-index/2024-ai-index-report)"
+        },
+        {
+          "finding": "研究问题：AI 训练的固定投入还在以什么速度膨胀？《AI Index 2025》报告要点指出：前沿模型的训练计算量约每 5 个月翻一番，训练数据集约每 8 个月翻一番，训练功耗每年翻番。对教材的补充：短期成本曲线的『固定端』本身在快速抬高——企业必须用更大的产量（更多用户、更多调用）去摊薄急剧膨胀的固定成本，否则平均成本将失控。",
+          "controversy": "",
+          "citation": "[Stanford HAI, 2025, 《AI Index Report 2025》, The 2025 AI Index Report](https://hai.stanford.edu/ai-index/2025-ai-index-report)"
+        }
+      ],
+      "links": {
+        "prev": ["m05-01|边际产量递减正是 MC 曲线先降后升、ATC 呈 U 形的根源"],
+        "next": ["m05-03|画出成本曲线族后，关键要掌握 MC 与 AVC、ATC 交点的位置规则"]
+      },
+      "references": [
+        "[U.S. Department of Commerce, 2024, 《新闻稿》, Biden-Harris Administration Announces CHIPS Incentives Award with TSMC Arizona](https://www.commerce.gov/news/press-releases/2024/11/biden-harris-administration-announces-chips-incentives-award-tsmc)",
+        "[Stanford HAI, 2024, 《AI Index Report 2024》, The 2024 AI Index Report](https://hai.stanford.edu/ai-index/2024-ai-index-report)",
+        "[Stanford HAI, 2025, 《AI Index Report 2025》, The 2025 AI Index Report](https://hai.stanford.edu/ai-index/2025-ai-index-report)"
+      ]
+    },
+    {
+      "id": "m05-03",
+      "title": "边际成本与平均成本的关系",
+      "l1": {
+        "definition": "边际成本（marginal cost, MC）是多生产一单位产品所新增的总成本；平均总成本（average total cost, ATC）是总成本除以产量。两者关系像『新同学分数与全班平均分』：新来的分数低于平均，平均分就被拉低——MC < ATC 时 ATC 下降；MC > ATC 时 ATC 上升；MC = ATC 时 ATC 恰好处在最低点。",
+        "analogy": "班里转来一位新同学（边际的那一单位）：他考得比全班平均分低，全班平均分就下降；考得高，平均分就上升。MC 是『新同学的分数』，ATC 是『全班平均分』；MC 曲线恰好在 ATC 的最低点自下而上穿过它。",
+        "image": {
+          "type": "two-lines-intersection",
+          "params": {
+            "aLabel": "边际成本 MC",
+            "aDir": "up",
+            "bLabel": "平均成本 ATC",
+            "bDir": "down",
+            "xLabel": "产量 Q",
+            "yLabel": "单位成本",
+            "pointLabel": "MC=ATC（ATC 最低）"
+          },
+          "caption": "MC 自下而上穿过 ATC 的最低点：交点之前拉低平均成本，交点之后拉高平均成本。"
+        }
+      },
+      "case": {
+        "event": "Netflix 2024 年四季度业绩：付费会员突破 3 亿（2025 年 1 月）",
+        "facts": "2025 年 1 月 21 日，Netflix 公布 2024 年四季度业绩：全球付费会员达 3.0163 亿，当季净增创纪录的 1,900 万；四季度收入 102.5 亿美元，同比增长 16%；净利润 18.7 亿美元；含『额外会员账户』在内的全球观众估计超过 7 亿。这也是 Netflix 最后一次公布季度付费会员数。",
+        "source_ref": "[CNBC, 2025, 《CNBC》, Netflix shares soar as company reports surging revenue, tops 300 million subscribers](https://www.cnbc.com/2025/01/21/netflix-nflx-earnings-q4-2024.html)",
+        "explain": "流媒体的内容制作与基础设施是巨额固定成本，而『多服务一个订阅用户』的边际成本接近于零——MC 曲线远低于 ATC 曲线。于是 ATC ≈（内容+运营成本）/会员数：会员从约 2.8 亿增至 3.0163 亿的过程，就是不断摊薄固定成本、把平均成本往下拉的过程，这正是『MC < ATC 时 ATC 必然下降』的教科书机制。"
+      },
+      "l2": {
+        "derivation": "① 平均-边际规则：MC < ATC ⇔ ATC 递减；MC > ATC ⇔ ATC 递增；MC = ATC ⇔ ATC 最小。代数验证见 L3。\n② 数值验证（沿用 m05-02 成本表）：ATC 在 Q=4 处最低（60）；其前一段 MC(3→4)=50 低于 ATC(3)=63.3，把平均值往下拉；其后 MC(4→5)=70 高于 ATC(4)=60，把平均值往上推——最低点恰在 MC 越过 ATC 处。\n③ 顺序规律：MC 先后穿过 AVC 与 ATC 的最低点；因为 ATC = AVC + AFC，递减的 AFC 一直在往下拉 ATC，所以 ATC 的最低点位于 AVC 最低点的右方，且 ATC 最低点的值更低。\n④ 图形题要领：先画先降后升的 MC，再画两条 U 形曲线，让 MC 依次穿过它们的谷底。",
+        "exam_tips": "高频考点：MC 分别交 AVC、ATC 于其最低点；AVC 最低点在先、ATC 最低点在后；MC 最低点对应 TVC/TC 的拐点；用『平均-边际』规则判断 ATC 走向；ATC 与 AVC 的垂直距离 = AFC。",
+        "pitfalls": [
+          "❌误区：MC 开始上升后，ATC 马上跟着上升 → ✅纠正：只要 MC 仍在 ATC 下方，ATC 就继续下降；ATC 转升必须等 MC 越过 ATC（即到达其最低点）。",
+          "❌误区：MC 曲线与 ATC 曲线相交于 ATC 的下降段 → ✅纠正：交点必在 ATC 最低点；若交在下降段，意味着 MC < ATC 却还在拉高平均值，图形自相矛盾。"
+        ]
+      },
+      "l3": {
+        "math": "由 ATC = TC/Q 求导：dATC/dQ = (Q·TC′ − TC)/Q² = (MC − ATC)/Q。故 MC < ATC ⇔ dATC/dQ < 0，MC = ATC 是 ATC 极小值的一阶条件（二阶条件自动满足于 U 形）。同理 dAVC/dQ = (MC − AVC)/Q，AVC 最低点先于 ATC 最低点（递减的 AFC 持续下移 ATC 的谷底）。示例：TC = FC + cQ² ⇒ MC = 2cQ，ATC = FC/Q + cQ，最低点 Q* = √(FC/c)，该处 MC = ATC = 2√(c·FC)。"
+      },
+      "animation": {
+        "type": "slider-graph",
+        "params": {
+          "mode": "line",
+          "expr": "s2*x + s1/x",
+          "xRange": [1, 80],
+          "yLabel": "平均成本 ATC",
+          "xLabel": "产量 Q",
+          "sliders": [
+            {"key": "s1", "min": 50, "max": 400, "step": 10, "init": 200, "label": "固定成本 FC"},
+            {"key": "s2", "min": 0.1, "max": 1, "step": 0.1, "init": 0.5, "label": "可变成本系数 b"}
+          ]
+        },
+        "description": "ATC = FC/Q + b·Q，对应的 MC = 2b·Q 是一条过原点的直线；ATC 最低点必在 MC 与其相交处（Q* = √(FC/b)）。拖动两个滑杆，看谷底位置如何移动。",
+        "interactions": ["拖动『固定成本 FC』滑杆：谷底右移且变深", "拖动『可变成本系数 b』滑杆：谷底左移或右移", "心算验证：谷底横坐标 ≈ √(FC/b)，该处 MC = ATC"]
+      },
+      "quiz": [
+        {
+          "level": "L1",
+          "stem": "只要边际成本低于平均总成本（MC < ATC），就可以断定：",
+          "options": ["ATC 正在下降", "ATC 正在上升", "ATC 保持不变", "MC 一定在下降"],
+          "answer": 0,
+          "explain": "低于平均的『新同学』会拉低平均分：MC < ATC 时多生产一单位在拉低平均总成本，故 ATC 正在下降。MC 自身的升降与此无关。",
+          "hint": "用『新同学分数与全班平均分』的类比：分数低于平均的新同学会让平均分怎么走？"
+        },
+        {
+          "level": "L2",
+          "stem": "（案例背景）Netflix 全球付费会员达 3.0163 亿、当季净增 1,900 万。用 MC 与 ATC 的关系解释『会员越多对 Netflix 越有利』，最准确的是：",
+          "options": ["会员越多，向每位会员收取的价格越高", "内容与基础设施成本近似固定，多一个订阅用户的边际成本近零、远低于平均成本，新增会员持续摊薄 ATC", "会员越多，服务每个会员的边际成本越高", "Netflix 没有任何固定成本"],
+          "answer": 1,
+          "explain": "流媒体的固定成本（内容、带宽基础设施）巨大，而多服务一个用户的 MC 接近零，远低于 ATC；因此每一批新增会员都在拉低平均总成本，MC < ATC 的教科书机制在数字平台上表现得极为极端。",
+          "hint": "想一想：多 1,900 万会员，Netflix 需要多拍一部剧吗？新增的几乎只是带宽与账号成本。"
+        },
+        {
+          "level": "L3",
+          "stem": "设平均总成本函数 ATC(Q) = 400/Q + 0.25Q。ATC 最低点对应的产量 Q* 与最低平均成本分别为（此时恰有 MC = ATC）：",
+          "options": ["Q=20，ATC=25", "Q=25，ATC=22.25", "Q=40，ATC=20", "Q=50，ATC=20.5"],
+          "answer": 2,
+          "explain": "令 dATC/dQ = −400/Q² + 0.25 = 0 得 Q* = 40，ATC(40) = 10 + 10 = 20。此时 MC = 0.5Q = 20 = ATC，验证『MC 穿过 ATC 最低点』。",
+          "hint": "对 ATC 求导并令其为零；或利用最低点处 FC/Q = bQ（固定成本摊薄与抬升效应平衡）。"
+        }
+      ],
+      "frontier": [
+        {
+          "finding": "研究问题：AI 服务的边际成本（推理成本）下降得有多快？斯坦福 HAI《AI Index 2025》报告要点指出：达到 GPT-3.5 水平的模型，其查询成本在 2022 年 11 月至 2024 年 10 月间下降超过 280 倍；硬件层面成本每年下降约 30%，能源效率每年提升约 40%。对教材的修正/补充：教材把 MC 曲线当作给定，现实中技术进步会让整条 MC 曲线急速下移；对『零边际成本』的数字产品而言，平均成本几乎全由固定成本决定，竞争随之转向质量与生态而非单位成本。",
+          "controversy": "",
+          "citation": "[Stanford HAI, 2025, 《AI Index Report 2025》, The 2025 AI Index Report](https://hai.stanford.edu/ai-index/2025-ai-index-report)"
+        }
+      ],
+      "links": {
+        "prev": ["m05-02|成本曲线族的画法是本页交点规则的基础"],
+        "next": ["m05-04|把『所有投入都可变』放开后，MC-ATC 的短期关系让位于长期平均成本包络线"]
+      },
+      "references": [
+        "[CNBC, 2025, 《CNBC》, Netflix shares soar as company reports surging revenue, tops 300 million subscribers](https://www.cnbc.com/2025/01/21/netflix-nflx-earnings-q4-2024.html)",
+        "[Stanford HAI, 2025, 《AI Index Report 2025》, The 2025 AI Index Report](https://hai.stanford.edu/ai-index/2025-ai-index-report)"
+      ]
+    },
+    {
+      "id": "m05-04",
+      "title": "长期成本与规模经济",
+      "l1": {
+        "definition": "长期内所有投入（厂房、设备、人员）都可以调整，企业可以规划任意规模的工厂，长期平均成本曲线（LRAC）就是每个产量水平上最低单位成本的连线。若扩大产量能使长期平均成本下降，称为规模经济（economies of scale）；若平均成本不随产量变化，为规模报酬不变；若平均成本反而上升，称为规模不经济（diseconomies of scale）。",
+        "analogy": "一家餐馆从 1 家店开到 100 家：集中采购压低食材单价、中央厨房分摊研发、一次品牌广告全连锁受益——越开越省，这是规模经济；但店开到上千家后总部人浮于事、管理失控，成本重新抬头，这是规模不经济。",
+        "image": {
+          "type": "bars",
+          "params": {
+            "items": [
+              {"label": "10万件", "value": 100},
+              {"label": "100万件", "value": 60},
+              {"label": "1000万件", "value": 45},
+              {"label": "5000万件", "value": 48}
+            ],
+            "xLabel": "年产量（示意）",
+            "yLabel": "长期平均成本（元/件）"
+          },
+          "caption": "长期平均成本先降（规模经济）、后平（规模报酬不变）、再升（规模不经济），LRAC 呈 U 形（数值为示意）。"
+        }
+      },
+      "case": {
+        "event": "全球锂电池包价格 2024 年降至 115 美元/千瓦时（BloombergNEF 年度调查）",
+        "facts": "2024 年 12 月 10 日，BloombergNEF 年度价格调查发布：全球锂电池包均价较 2023 年下降 20%，创 115 美元/千瓦时的新低，为 2017 年以来最大年度降幅；纯电动汽车电池包价格 97 美元/千瓦时，首次跌破 100 美元；中国均价最低（94 美元/千瓦时），美国与欧洲分别高出 31% 和 48%。BNEF 将下降归因于电池制造产能过剩（全球已建成电芯产能 3.1 TWh，超过 2024 年锂电年需求的 2.5 倍）、规模经济、金属与零部件低价、磷酸铁锂（LFP）占比提升等。",
+        "source_ref": "[BloombergNEF, 2024, 《新闻稿》, Lithium-Ion Battery Pack Prices See Largest Drop Since 2017, Falling to $115 per Kilowatt-Hour](https://about.bnef.com/insights/commodities/lithium-ion-battery-pack-prices-see-largest-drop-since-2017-falling-to-115-per-kilowatt-hour-bloombergnef/)",
+        "explain": "动力电池是典型的规模经济行业：产线、研发与设备投入巨大，累计产量越大、单位成本越低——BNEF 点名的驱动因素中就有『规模经济』。中国厂商以全球最大的产能与产量摊薄固定投入，电池包均价 94 美元/千瓦时为全球最低；美欧产能规模较小、单位成本分别高出 31% 和 48%，正是位于 LRAC 曲线左侧、尚未达到最小有效规模时的写照。"
+      },
+      "l2": {
+        "derivation": "① LRAC 是短期 ATC 曲线族的包络线：每一产量对应一个最优工厂规模，LRAC 与各条短期 ATC 相切（仅与其中一条相切于二者共同的最低点）。\n② 三个区间：规模经济段——专业化与分工深化、不可分割的投入（研发、产线、品牌）被摊薄、几何-工程关系（如容器容积按平方-立方律放大）、大批量采购议价；规模报酬不变段——扩产只是复制既有工厂，平均成本走平；规模不经济段——管理层级膨胀、信息传递与协调损耗上升，平均成本回升。\n③ 最小有效规模（MES）：达到 LRAC 谷底所需的最小产量；MES 相对市场需求越大，能并存的企业越少，市场越趋于寡头。\n④ 概念辨析：规模经济是成本概念（可含采购议价、学习效应等），规模报酬是纯技术概念（所有要素同比例增加时产量的变化），前者范围更宽。",
+        "exam_tips": "高频考点：包络线作图与切点性质；三区间成因的排序与对应；MES 与市场结构的联系；规模经济与范围经济（多产品共享投入）的区分；学习曲线（累积产量使单位成本下降）是规模经济在时间维度上的动态版本。",
+        "pitfalls": [
+          "❌误区：规模经济就是规模报酬递增 → ✅纠正：规模报酬是纯技术关系（同比例增加所有投入）；规模经济是成本概念，还可来自采购议价、融资成本、学习效应等，范围更宽。",
+          "❌误区：企业越大越好，规模不经济不会发生 → ✅纠正：组织协调成本随规模上升，LRAC 终会抬头；长期最优产量仍由 MR=MC 与市场结构决定，而非一味求大。"
+        ]
+      },
+      "l3": {
+        "math": "长期成本最小化：min wL + rK s.t. F(L,K) = Q，拉格朗日函数 ℒ = wL + rK − λ(F(L,K) − Q)；一阶条件 MP_L/MP_K = w/r（MRTS = 要素价格比），λ = ∂C*/∂Q = MC（影子价格）。规模弹性 e(Q) = dlnC*/dlnQ；由 AC = C/Q 得 dlnAC/dlnQ = e − 1，故 e < 1 ⇔ AC 递减 ⇔ 规模经济，e > 1 为规模不经济。Cobb-Douglas F = A·L^α·K^β ⇒ 成本函数 C = Q^(1/(α+β)) × 常数；α + β > 1 时 Q 的指数小于 1，存在规模经济。"
+      },
+      "animation": {
+        "type": "slider-graph",
+        "params": {
+          "mode": "line",
+          "expr": "s1*Math.pow(x,-0.35) + s2*Math.pow(x,0.25)",
+          "xRange": [1, 200],
+          "yLabel": "长期平均成本 LRAC",
+          "xLabel": "产量 Q",
+          "sliders": [
+            {"key": "s1", "min": 40, "max": 160, "step": 10, "init": 80, "label": "规模经济强度"},
+            {"key": "s2", "min": 5, "max": 20, "step": 0.5, "init": 10, "label": "规模不经济强度"}
+          ]
+        },
+        "description": "LRAC = s1·x^(-0.35) + s2·x^(0.25)：左段因规模经济下降，右段因规模不经济缓慢上升，谷底附近即最小有效规模（MES）。",
+        "interactions": ["拖动『规模经济强度』滑杆：左段更陡，MES 右移", "拖动『规模不经济强度』滑杆：右侧抬高，谷底位置改变", "观察 U 形右半支上升很缓——对应『许多行业 LRAC 近似 L 形』的经验现象"]
+      },
+      "quiz": [
+        {
+          "level": "L1",
+          "stem": "规模经济（economies of scale）指的是：",
+          "options": ["企业规模越大，总利润一定越高", "投入同比例增加、产量也恰好同比例增加", "产量扩大使长期平均成本下降", "企业的产品线越宽越好"],
+          "answer": 2,
+          "explain": "规模经济是成本概念：扩大产量使长期平均成本下降。B 项描述的是规模报酬不变；A、D 把规模与利润、产品种类混为一谈。",
+          "hint": "抓关键词『平均成本下降』：规模经济说的是单位成本，不是总利润。"
+        },
+        {
+          "level": "L2",
+          "stem": "（案例背景）BloombergNEF 调查显示 2024 年中国电池包均价 94 美元/千瓦时为全球最低，美国与欧洲分别高出 31% 和 48%。用长期成本理论解释最贴切的是：",
+          "options": ["中国电价便宜，所以电池成本低", "中国厂商产能与累计产量全球最大，固定投入摊薄更充分、单位成本位于 LRAC 更低处；美欧产量规模小、尚未达到最小有效规模，单位成本更高", "中国工人工资为零", "规模不经济使美欧的单位成本上升"],
+          "answer": 1,
+          "explain": "动力电池固定投入巨大，中国厂商凭借全球最大的产能与产量把固定投入摊薄得更充分，单位成本处于 LRAC 更低位置；BNEF 也明确把『规模经济』列为降价驱动因素之一。美欧高出 31%/48% 的价差，主要是产量规模与生产成本差异所致。",
+          "hint": "区分『规模经济带来的成本下降』与『规模不经济导致的成本上升』：题干说的是美欧成本更高，对应的是谁未到 MES？"
+        },
+        {
+          "level": "L3",
+          "stem": "某企业长期成本函数为 C(Q) = 100·Q^0.8。下列判断正确的是：",
+          "options": ["AC = 100·Q^(−0.2) 随 Q 递减，规模弹性 e = 0.8 < 1，存在规模经济", "AC 随 Q 递增，存在规模不经济", "规模报酬不变，AC 为常数", "AC = 100·Q^1.25，随 Q 递增"],
+          "answer": 0,
+          "explain": "AC = C/Q = 100·Q^(−0.2)，随 Q 递减；成本弹性 e = dlnC/dlnQ = 0.8 < 1，即产量增加 1% 使总成本只增加 0.8%，平均成本下降，存在规模经济（注意与指数 0.8 直接对应）。",
+          "hint": "先写出 AC = C/Q，再看 dlnC/dlnQ 与 1 的大小关系；幂函数的指数就是成本弹性。"
+        }
+      ],
+      "frontier": [
+        {
+          "finding": "研究问题：锂电池成本的长期下降遵循什么规律？MIT 研究者 Ziegler 与 Trancik 发表于《Energy & Environmental Science》的研究发现：自 1991 年商业化以来，锂离子电池的成本已下降约 97%；据《经济学人》对该研究的引述，2006–2016 年间电池产量翻了五番，每翻一番价格约下降四分之一，其改善速度可与光伏电池板媲美。对教材的补充：『产量每翻倍、单位成本按大致固定的百分比下降』被称为学习曲线（经验曲线），是规模经济在时间维度上的动态形式，为电池、光伏等清洁技术的成本预测提供了经验基础。",
+          "controversy": "学习曲线能否持续外推存在争议：原材料涨价、产能过剩与过度竞争可能中断这一趋势（BNEF 2024 年亦指出电芯产能已达需求的 2.5 倍以上），学界尚有争议。",
+          "citation": "[MIT News, 2021, 《MIT News》, Study reveals plunge in lithium-ion battery costs](https://news.mit.edu/2021/lithium-ion-battery-costs-0323)"
+        }
+      ],
+      "links": {
+        "prev": ["m05-03|短期里 MC 穿过 ATC 最低点；长期里所有投入可变，曲线族折叠成一条包络线"],
+        "next": ["m05-05|长期成本中别忘了隐形成本：经济利润与会计利润的口径之差"]
+      },
+      "references": [
+        "[BloombergNEF, 2024, 《新闻稿》, Lithium-Ion Battery Pack Prices See Largest Drop Since 2017, Falling to $115 per Kilowatt-Hour](https://about.bnef.com/insights/commodities/lithium-ion-battery-pack-prices-see-largest-drop-since-2017-falling-to-115-per-kilowatt-hour-bloombergnef/)",
+        "[MIT News, 2021, 《MIT News》, Study reveals plunge in lithium-ion battery costs](https://news.mit.edu/2021/lithium-ion-battery-costs-0323)"
+      ]
+    },
+    {
+      "id": "m05-05",
+      "title": "经济利润、会计利润与沉没成本",
+      "l1": {
+        "definition": "经济利润（economic profit）= 总收益 − 显性成本 − 隐性成本；它比会计利润（= 总收益 − 显性成本）多扣除了自有资源的机会成本（如自己本可拿到的工资、自有资金本可获得的利息）。沉没成本（sunk cost）是已经付出、无法收回的成本；理性决策不应再考虑它——决策只看未来的收益与成本，『覆水难收，向前看』。",
+        "analogy": "你花 60 元买了张电影票，开场 20 分钟发现是烂片：票钱已是沉没成本，走还是留应只比较『接下来的时间』怎么用最值。又如小李放弃年薪 10 万的工作去创业，账面赚了 6 万元会计利润，但经济利润 = 6 − 10 = −4 万元：把放弃的工资算进去，其实是亏的。",
+        "image": {
+          "type": "bars",
+          "params": {
+            "items": [
+              {"label": "会计利润", "value": 15},
+              {"label": "隐性成本", "value": 8},
+              {"label": "经济利润", "value": 7}
+            ],
+            "xLabel": "项目（万元，示意）",
+            "yLabel": "金额"
+          },
+          "caption": "会计利润（15 万）扣除自有资源的机会成本（隐性成本 8 万）后，经济利润只有 7 万（数值为示意）。"
+        }
+      },
+      "case": {
+        "event": "Planet Fitness 的低价月卡模式：1,870 万会员的『沉没成本』生意（2024 年）",
+        "facts": "2024 年 2 月 22 日，Planet Fitness 发布 2023 年业绩：截至 2023 年 12 月 31 日拥有约 1,870 万会员、2,575 家门店（覆盖美国 50 个州及多个国家地区）；全年总收入增长 14.4% 至 11 亿美元，归属公司净利润 1.383 亿美元，会员较 2022 年底净增 170 万，公司强调其『资产轻（asset-light）』模式。其 2023 财年年报（10-K）披露：标准 Classic Card 会员『每月仅 10 美元起』，PF Black Card 约 24.99 美元/月。",
+        "source_ref": "[Planet Fitness, Inc., 2024, 《新闻稿（SEC Exhibit 99.1）》, Planet Fitness, Inc. Announces Fourth Quarter and Year-End 2023 Results](https://www.sec.gov/Archives/edgar/data/1637207/000163720724000016/plntq42023pressreleaseex991.htm)",
+        "explain": "对会员来说，月费一经支付即成沉没成本——去不去健身房都无法收回；健身房以 10 美元级的低价吸引海量会员（1,870 万），商业模式的成立依赖高会员基数与相对有限的人均使用率来分摊单店成本。对企业来说，低价还能盈利靠的是『资产轻』的加盟结构：把开店的重资产投入与相应机会成本（隐性成本）留给加盟商，总部收取特许经营费——会计利润与经济利润的口径差异，在这里被做成了商业模式设计。"
+      },
+      "l2": {
+        "derivation": "① 口径：会计利润 = TR − 显性成本；经济利润 = TR − 显性成本 − 隐性成本 = 会计利润 − 隐性成本。\n② 正常利润：企业家才能的报酬（隐性成本的一部分）；经济利润为零 ≠ 白干，而是恰好获得正常利润，企业可长期经营。\n③ 数值演示：小李辞职创业：TR = 80 万；显性成本（原料、房租、雇工）= 65 万 → 会计利润 = 15 万；隐性成本 = 放弃的年薪 12 万 + 自有资金 50 万 × 4% 利息 2 万 = 14 万 → 经济利润 = 15 − 14 = 1 万。\n④ 沉没成本的处理：已花且不可回收的支出不进入当期决策——MC 只包含未来需追加的可变成本；决策只比较未来的边际收益与边际成本（这一点在 m06-03 的停产决策中再次出现）。",
+        "exam_tips": "高频考点：会计利润、经济利润、正常利润三者换算；隐性成本的识别（自有资金利息、自有房屋租金、企业家自己的工资）；判断『经济利润为零仍值得经营』；用沉没成本原理解释促销、会员制与预付卡；简答题常考『为什么会计师与经济学家算出的利润不同』。",
+        "pitfalls": [
+          "❌误区：经济利润为 0 说明企业马上要倒闭 → ✅纠正：经济利润为 0 意味着恰好获得正常利润，隐性成本（含企业家才能报酬）已全部得到补偿，企业可以长期经营下去。",
+          "❌误区：票已经买了，再难看也要看完，否则就亏了 → ✅纠正：票款是沉没成本，无论走留都收不回来；理性决策只比较未来的边际收益与边际成本——『非看完不可』正是沉没成本谬误。"
+        ]
+      },
+      "l3": {
+        "math": "π_e = TR(Q) − Σw_i·x_i（显性）− Σ(自有资源机会成本)（隐性）。理性决策在边际上进行：增减产量只比较 MR 与 MC；沉没支出 S 不进入 MC = dVC/dQ，因为无论是否继续生产 S 都已无法收回。跨期退出条件：若长期 π_e < 0（P < AC_min）且无改善预期，资本应转作他途——这正是完全竞争长期均衡 π_e = 0 的对照面。注意机会成本与沉没成本的边界：资产若存在二手市场可部分变现，未回收部分才是沉没的；可变现部分仍是机会成本。"
+      },
+      "animation": {
+        "type": "slider-graph",
+        "params": {
+          "mode": "line",
+          "expr": "s1 - s2",
+          "xRange": [0, 10],
+          "yLabel": "经济利润（万元）",
+          "xLabel": "产量（示意）",
+          "sliders": [
+            {"key": "s1", "min": 0, "max": 50, "step": 1, "init": 20, "label": "会计利润（万元）"},
+            {"key": "s2", "min": 0, "max": 40, "step": 1, "init": 15, "label": "隐性成本（万元）"}
+          ]
+        },
+        "description": "经济利润 = 会计利润 − 隐性成本：拖动两个滑杆让水平线上下移动；当它降到 0 以下，说明把自有资源的机会成本算进去后其实是在亏损。",
+        "interactions": ["拖动『会计利润』滑杆上下移动水平线", "拖动『隐性成本』滑杆，观察经济利润穿越 0 线的时刻——会计赚钱、经济亏损的分界"]
+      },
+      "quiz": [
+        {
+          "level": "L1",
+          "stem": "已经付出且无法收回的沉没成本，在理性决策中应当：",
+          "options": ["不予考虑，只比较未来的收益与成本", "作为边际成本计入当期决策", "双倍计入以防再犯同样错误", "平均分摊到每单位产量上"],
+          "answer": 0,
+          "explain": "沉没成本无论如何决策都收不回来，因而不影响任何可选方案的成本收益对比；理性决策只看未来的边际收益与边际成本。",
+          "hint": "『覆水难收』：做决定时问一句——这笔钱还有哪条路能拿回来？拿不回来就不该影响选择。"
+        },
+        {
+          "level": "L2",
+          "stem": "（案例背景）Planet Fitness 以『每月 10 美元起』的低价吸引约 1,870 万会员、经营 2,575 家门店。从沉没成本角度看其商业模式成立的原因，最准确的是：",
+          "options": ["会员费贵到没人舍得退", "会员费支付后即成沉没成本，健身房可按『会员基数大、人均使用有限』来定价与配置器械，低价仍能覆盖平均成本", "健身房没有任何固定成本", "低价必然导致亏损，靠政府补贴维持"],
+          "answer": 1,
+          "explain": "会员付费后，费用对消费者即成沉没成本，健身房据此以低价广纳会员，并按高基数、低人均使用的现实配置器械与场地，把固定成本摊到极薄；2023 年公司收入 11 亿美元、归属净利润 1.383 亿美元，证明低价与盈利可以并存。",
+          "hint": "想想办了卡却很少去的人：他们的会费为谁分摊了成本？"
+        },
+        {
+          "level": "L3",
+          "stem": "小李辞职创业：年总收入 80 万元，显性成本 65 万元；他放弃的年薪为 12 万元，投入自有资金 50 万元（若存银行年利率 4%）。该企业的经济利润为：",
+          "options": ["15 万元", "3 万元", "1 万元", "−1 万元"],
+          "answer": 2,
+          "explain": "会计利润 = 80 − 65 = 15 万；隐性成本 = 放弃的年薪 12 万 + 自有资金利息 50 × 4% = 2 万，合计 14 万；经济利润 = 15 − 14 = 1 万。会计上赚钱不等于经济上赚钱，但此处仍为正。",
+          "hint": "别忘两项隐性成本：放弃的工资与自有资金的利息；经济利润 = 会计利润 − 隐性成本。"
+        }
+      ],
+      "frontier": [
+        {
+          "finding": "研究问题：沉没成本效应在受控实验中有多大、由什么驱动？Ronayne、Sgroi 与 Tuckwell（JEBO 2021）设计实验：受试者通过真实努力任务赢得一张彩票后，有机会更换为一张占优（客观更好）的彩票，结果仍有 23% 的人坚持持有被占优的彩票；禀赋效应只能解释其中约三分之一，认知反思能力是沉没成本行为的重要预测因素，作者还构建了测量沉没成本倾向的 SCE-8 量表。对教材的补充：『沉没成本不是成本』是规范结论，但系统性偏离真实存在且可测量——会员制、预付卡等定价模式正是利用了这一偏差。",
+          "controversy": "沉没成本效应的强度与边界学界尚有争议：部分研究（如 Negrini 等 2022 在投资决策情境）发现效应减弱甚至出现反向的沉没成本行为，效应大小依赖情境与个体认知差异。",
+          "citation": "[David Ronayne, Daniel Sgroi, Anthony Tuckwell, 2021, 《Journal of Economic Behavior & Organization》, Evaluating the sunk cost effect](https://ideas.repec.org/a/eee/jeborg/v186y2021icp318-327.html)"
+        }
+      ],
+      "links": {
+        "prev": ["m05-04|长期平均成本里必须计入自有资源的机会成本，才有『经济』利润一说"],
+        "next": ["m05-06|口径统一之后，企业面对的下一个问题是：产量定在多少，利润才最大"]
+      },
+      "references": [
+        "[Planet Fitness, Inc., 2024, 《新闻稿（SEC Exhibit 99.1）》, Planet Fitness, Inc. Announces Fourth Quarter and Year-End 2023 Results](https://www.sec.gov/Archives/edgar/data/1637207/000163720724000016/plntq42023pressreleaseex991.htm)",
+        "[Planet Fitness, Inc., 2024, 《FY2023 Form 10-K》, United States Securities and Exchange Commission](https://www.sec.gov/Archives/edgar/data/1637207/000163720724000020/plnt-20231231.htm)",
+        "[David Ronayne, Daniel Sgroi, Anthony Tuckwell, 2021, 《Journal of Economic Behavior & Organization》, Evaluating the sunk cost effect](https://ideas.repec.org/a/eee/jeborg/v186y2021icp318-327.html)"
+      ]
+    },
+    {
+      "id": "m05-06",
+      "title": "利润最大化：MR=MC",
+      "l1": {
+        "definition": "企业选择产量的黄金法则是边际收益等于边际成本（MR = MC）：边际收益（marginal revenue, MR）是多卖一单位产品新增的收益，边际成本（MC）是多生产一单位新增的成本。MR > MC 时再多生产还能多赚；MR < MC 时多生产反而亏损；因此最优产量恰好停在 MR = MC 处。",
+        "analogy": "加班决策：多干一小时的加班费是 100 元（边际收益），但你会更累、少陪家人，这份『代价』值 80 元（边际成本）——划算，继续加；当边际代价涨到 100 元时就该停。你自动找到了 MR = MC 的均衡点。",
+        "image": {
+          "type": "two-lines-intersection",
+          "params": {
+            "aLabel": "边际收益 MR",
+            "aDir": "down",
+            "bLabel": "边际成本 MC",
+            "bDir": "up",
+            "xLabel": "产量 Q",
+            "yLabel": "收益/成本",
+            "pointLabel": "MR=MC，最优产量 Q*"
+          },
+          "caption": "MR 曲线与 MC 曲线的交点决定利润最大化产量 Q*：交点左侧 MR>MC 应增产，右侧 MR<MC 应减产。"
+        }
+      },
+      "case": {
+        "event": "国家发展改革委完善峰谷分时电价机制（2021 年）",
+        "facts": "2021 年 7 月，国家发展改革委印发《关于进一步完善分时电价机制的通知》（发改价格〔2021〕1093 号）：上年或当年预计最大系统峰谷差率超过 40% 的地方，峰谷电价价差原则上不低于 4:1，其他地方原则上不低于 3:1；尖峰电价在峰段电价基础上上浮比例原则上不低于 20%，尖峰时段依据前两年电力系统最高负荷 95% 及以上出现的时段确定；各地需于 2021 年 12 月底前报送落实情况。",
+        "source_ref": "[国家发展改革委, 2021, 《关于进一步完善分时电价机制的通知》（发改价格〔2021〕1093号）](https://www.ndrc.gov.cn/xxgk/zcfb/tz/202107/t20210729_1292067.html)",
+        "explain": "电力系统的边际成本随时段剧烈变化：深夜谷段由低成本的基荷机组供电，多供一度电很便宜；傍晚尖峰需启用高成本调峰电源，边际成本陡升。分时电价让价格跟随边际成本起伏（峰谷价差原则上 4:1、尖峰再上浮不低于 20%），相当于把『按边际成本决定供给』的 MR=MC 逻辑写进电价表：价格反映边际成本，用户自然把用电挪到边际成本低谷，实现削峰填谷。"
+      },
+      "l2": {
+        "derivation": "① 推导：π = TR − TC，最大化的一阶条件 dπ/dQ = dTR/dQ − dTC/dQ = MR − MC = 0 ⇒ MR = MC；二阶条件 dMR/dQ − dMC/dQ < 0，即交点处 MC 自下而上穿过 MR。\n② 几何：利润是 TR 与 TC 两条曲线间的垂直距离，最大化处两曲线切线平行（斜率相等 = MR = MC）。\n③ 数值演示：Q = 0→5 时 TR = 0,60,110,150,180,200（MR = 60,50,40,30,20）；TC = 20,50,85,124,175,235（MC = 30,35,39,51,60）。逐单位比较：Q=1（60>30）、Q=2（50>35）、Q=3（40>39）都该增产，Q=4 时 MR=30<MC=51 应停止 → 最优 Q*=3，π = 150 − 124 = 26 最大。\n④ 特别情形：完全竞争市场 P = AR = MR，故 P = MC；垄断厂商 MR < P，仍在 MR = MC 处定产，再按需求曲线要价（见 m07）。利润最大化 ≠ 收入最大化：收入最大在 MR = 0 处，只要 MC > 0，其产量高于利润最大的产量。",
+        "exam_tips": "高频考点：MR=MC 的一阶条件与二阶条件；完全竞争 P = AR = MR = MC；给定 TR/TC 表或 MR/MC 表找最优产量（逐单位比较法）；利润最大、收益最大、平均成本最低三个产量的区别；亏损时仍先按 MR=MC 定产，再比较 P 与 AVC 决定是否停产（衔接 m06-03）。",
+        "pitfalls": [
+          "❌误区：产量越大，总利润一定越大 → ✅纠正：超过 MR = MC 的产量后，每多生产一单位都是 MC > MR，总利润反而缩小。",
+          "❌误区：利润最大化就是收入最大化 → ✅纠正：收入最大在 MR = 0 处；只要 MC > 0，收入最大化对应的产量高于利润最大化的产量。"
+        ]
+      },
+      "l3": {
+        "math": "max_Q π(Q) = TR(Q) − TC(Q)。一阶条件：TR′(Q) − TC′(Q) = MR − MC = 0；二阶条件：π″ = MR′ − MC′ < 0（MC 上升穿过 MR）。完全竞争下 MR = P，企业供给曲线即其 MC 曲线的上升段。与成本最小化对偶：拉格朗日乘子 λ = MC 是产量的影子价格，利润最大化把 λ 与边际收益对接。垄断下由 MR = P(1 − 1/|e|) 与 MR = MC 可得勒纳加价公式 (P − MC)/P = 1/|e|：需求弹性越小、价格对边际成本的偏离越大。"
+      },
+      "animation": {
+        "type": "slider-graph",
+        "params": {
+          "mode": "line",
+          "expr": "s1*x - 0.25*x*x - 50",
+          "xRange": [0, 140],
+          "yLabel": "利润 π",
+          "xLabel": "产量 Q",
+          "sliders": [{"key": "s1", "min": 10, "max": 60, "step": 1, "init": 30, "label": "价格 P=MR"}]
+        },
+        "description": "利润山 π = P·Q − 0.25Q² − 50：拖动价格滑杆，利润最高点总在 Q* = 2P 处——那里恰好 MR = P = MC = 0.5Q，直观演示 MR=MC 决定最优产量。",
+        "interactions": ["拖动『价格』滑杆：利润山的峰值右移/左移（Q* = 2P）", "越过峰值后再增产，观察利润反而下滑——MC>MR 的区域"]
+      },
+      "quiz": [
+        {
+          "level": "L1",
+          "stem": "企业实现利润最大化的产量条件是：",
+          "options": ["总收入 TR 达到最大", "边际收益等于边际成本（MR = MC）", "平均总成本 ATC 达到最低", "价格等于平均可变成本"],
+          "answer": 1,
+          "explain": "MR = MC 保证『最后一单位恰好不改变利润』，之前每单位都增加利润、之后每单位都减少利润，故总利润最大。收入最大在 MR=0 处，ATC 最低是单位成本最低，都不是利润最大条件。",
+          "hint": "逐单位想：只要多卖一单位新增的钱多于新增的成本，就该继续；停在哪？两者相等处。"
+        },
+        {
+          "level": "L2",
+          "stem": "（案例背景）分时电价政策要求峰谷差率超 40% 的地区价差原则上不低于 4:1，尖峰电价再上浮不低于 20%。用边际成本定价（MR=MC 思想）解释这一政策，最准确的是：",
+          "options": ["电价高低与供电成本无关，只是调节收入", "深夜电价高是因为夜间人们更愿意用电", "傍晚尖峰时多供一度电的边际成本最高，让价格跟上边际成本才能引导用户错峰、抑制最昂贵时段的需求", "价差越大，电网企业的利润一定越高"],
+          "answer": 2,
+          "explain": "电力边际成本随时段变化：尖峰需启用高成本调峰电源，MC 最高；谷段基荷机组 MC 很低。让价格跟随边际成本（4:1 价差、尖峰上浮 20%），相当于在每个时段按 MR=MC 决定『供给多少电』，并引导用户把需求挪向低谷，实现削峰填谷。",
+          "hint": "抓住『多供一度电的成本在什么时段最高』：价格应该跟着边际成本走。"
+        },
+        {
+          "level": "L3",
+          "stem": "某企业的 TR = 100Q − 2Q²，TC = 20 + 4Q + Q²。利润最大化的产量 Q* 与最大利润分别为：",
+          "options": ["Q*=16，π=748", "Q*=12，π=700", "Q*=20，π=700", "Q*=8，π=556"],
+          "answer": 0,
+          "explain": "MR = 100 − 4Q，MC = 4 + 2Q；令 MR = MC 得 Q* = 16。π = TR(16) − TC(16) = (1600 − 512) − (20 + 64 + 256) = 1088 − 340 = 748。二阶条件 π″ = −6 < 0 满足。",
+          "hint": "先分别求 MR = dTR/dQ 与 MC = dTC/dQ，令二者相等解出 Q*，再代回 π = TR − TC。"
+        }
+      ],
+      "frontier": [
+        {
+          "finding": "研究问题：算法定价软件普及后，企业定价与市场竞争如何改变？Assad、Clark、Ershov 与 Xu（JPE 2024）研究德国加油站市场（定价软件 2017 年起广泛可得）发现：算法定价的采用只在非垄断市场中提高加价（价格对边际成本的偏离）；在双寡头市场中，只有当两家站都采用算法时加价才会上升。对教材的修正/补充：现实企业未必精确执行 MR=MC，定价技术会系统性地把价格推向 MC 之上，且结果取决于市场结构与对手是否跟进——这是算法定价影响竞争的首个大市场经验证据。",
+          "controversy": "算法定价是否构成『算法合谋』、是否需要反垄断干预，学界尚有争议：一派认为算法只是更高效地执行既定博弈，另一派认为算法互动可能产生无协议的默契合谋。",
+          "citation": "[Stephanie Assad, Robert Clark, Daniel Ershov, Lei Xu, 2024, 《Journal of Political Economy》, Algorithmic Pricing and Competition: Empirical Evidence from the German Retail Gasoline Market](https://danielershov.com/publication/algorithmic-pricing-competition-german-retail-gasoline-market/)"
+        }
+      ],
+      "links": {
+        "prev": ["m05-05|成本与利润的口径统一后，企业才能在 MR=MC 处比较边际收益与边际成本", "m03-02|MR 的形状由弹性决定：弹性与总收入的关系是边际收益概念的源头"],
+        "next": ["m06-01|在完全竞争市场里，单个企业是价格接受者，MR 恰好等于市场价格 P"]
+      },
+      "references": [
+        "[国家发展改革委, 2021, 《关于进一步完善分时电价机制的通知》（发改价格〔2021〕1093号）](https://www.ndrc.gov.cn/xxgk/zcfb/tz/202107/t20210729_1292067.html)",
+        "[Stephanie Assad, Robert Clark, Daniel Ershov, Lei Xu, 2024, 《Journal of Political Economy》, Algorithmic Pricing and Competition: Empirical Evidence from the German Retail Gasoline Market](https://danielershov.com/publication/algorithmic-pricing-competition-german-retail-gasoline-market/)"
+      ]
+    }
+  ]
+}
